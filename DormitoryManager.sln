@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DormitoryManager", "DormitoryManager\DormitoryManager.csproj", "{B428AD11-C397-4D17-87C7-E950B4858CDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{F91F8EB5-297F-41DC-9980-7F7F2AFA06B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B428AD11-C397-4D17-87C7-E950B4858CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B428AD11-C397-4D17-87C7-E950B4858CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B428AD11-C397-4D17-87C7-E950B4858CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B428AD11-C397-4D17-87C7-E950B4858CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91F8EB5-297F-41DC-9980-7F7F2AFA06B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91F8EB5-297F-41DC-9980-7F7F2AFA06B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91F8EB5-297F-41DC-9980-7F7F2AFA06B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91F8EB5-297F-41DC-9980-7F7F2AFA06B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D84EA049-1154-4928-A61C-C2F4E1E72CDB}
+	EndGlobalSection
+EndGlobal
