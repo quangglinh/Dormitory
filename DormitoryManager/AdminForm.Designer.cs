@@ -30,11 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.AddRoom = new System.Windows.Forms.Button();
-            this.UpdateRoom = new System.Windows.Forms.Button();
-            this.StudentRequests = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.StudentRequests = new System.Windows.Forms.Button();
+            this.UpdateRoom = new System.Windows.Forms.Button();
+            this.AddRoom = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,30 +59,14 @@
             this.panel1.Size = new System.Drawing.Size(368, 338);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
+            // button1
             // 
-            this.panel2.Location = new System.Drawing.Point(409, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(368, 338);
-            this.panel2.TabIndex = 2;
-            // 
-            // AddRoom
-            // 
-            this.AddRoom.Location = new System.Drawing.Point(33, 21);
-            this.AddRoom.Name = "AddRoom";
-            this.AddRoom.Size = new System.Drawing.Size(298, 23);
-            this.AddRoom.TabIndex = 0;
-            this.AddRoom.Text = "Add New Room";
-            this.AddRoom.UseVisualStyleBackColor = true;
-            // 
-            // UpdateRoom
-            // 
-            this.UpdateRoom.Location = new System.Drawing.Point(33, 64);
-            this.UpdateRoom.Name = "UpdateRoom";
-            this.UpdateRoom.Size = new System.Drawing.Size(298, 23);
-            this.UpdateRoom.TabIndex = 2;
-            this.UpdateRoom.Text = "Update a Room";
-            this.UpdateRoom.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(33, 153);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(298, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "View Room\'s Informations";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // StudentRequests
             // 
@@ -93,14 +77,31 @@
             this.StudentRequests.Text = "View Student\'s Requests";
             this.StudentRequests.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // UpdateRoom
             // 
-            this.button1.Location = new System.Drawing.Point(33, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(298, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "View Room\'s Informations";
-            this.button1.UseVisualStyleBackColor = true;
+            this.UpdateRoom.Location = new System.Drawing.Point(33, 64);
+            this.UpdateRoom.Name = "UpdateRoom";
+            this.UpdateRoom.Size = new System.Drawing.Size(298, 23);
+            this.UpdateRoom.TabIndex = 2;
+            this.UpdateRoom.Text = "Update a Room";
+            this.UpdateRoom.UseVisualStyleBackColor = true;
+            // 
+            // AddRoom
+            // 
+            this.AddRoom.Location = new System.Drawing.Point(33, 21);
+            this.AddRoom.Name = "AddRoom";
+            this.AddRoom.Size = new System.Drawing.Size(298, 23);
+            this.AddRoom.TabIndex = 0;
+            this.AddRoom.Text = "Add New Room";
+            this.AddRoom.UseVisualStyleBackColor = true;
+            this.AddRoom.Click += new System.EventHandler(this.AddRoom_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(409, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(368, 338);
+            this.panel2.TabIndex = 2;
             // 
             // AdminForm
             // 

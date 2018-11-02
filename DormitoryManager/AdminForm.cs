@@ -15,5 +15,10 @@ namespace DormitoryManager
         {
             InitializeComponent();
         }
+
+        private void AddRoom_Click(object sender, EventArgs e)
+        {
+            new AddRoomForm().Show();
+        }
     }
 }
