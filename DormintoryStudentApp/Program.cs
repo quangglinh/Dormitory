@@ -1,9 +1,9 @@
-﻿using System;
+﻿using DormintoryStudentApp.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-
-namespace UserInterface
+namespace DormintoryStudentApp
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace UserInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(mainForm: new ManagementForm());
         }
     }
 }
