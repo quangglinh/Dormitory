@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\ChangeRoomRequest.cs" />
+    <Compile Include="Entity\LeaveRoomRequest.cs" />
+    <Compile Include="Entity\ProblemComplain.cs" />
+    <Compile Include="Entity\Room.cs" />
+    <Compile Include="Entity\Student.cs" />
+    <Compile Include="Entity\StudentStatus.cs" />
     <Compile Include="Supporting Files\DBUltiity.cs" />
     <Compile Include="UI\ManagementForm.cs">
       <SubType>Form</SubType>
@@ -84,7 +90,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entity\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
