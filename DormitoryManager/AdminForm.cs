@@ -20,5 +20,15 @@ namespace DormitoryManager
         {
             new AddRoomForm().Show();
         }
+
+        private void UpdateRoom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new RoomInfoForm().Show();
+        }
     }
 }
