@@ -28,7 +28,8 @@ namespace DormintoryStudentApp.UI
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            SearchRoom searchRoomForm = new SearchRoom();
+            searchRoomForm.ShowDialog();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -39,6 +40,8 @@ namespace DormintoryStudentApp.UI
         private void button1_Click(object sender, EventArgs e)
         {
 
+            RoomStatus roomStatusForm = new RoomStatus(theStudent);
+            roomStatusForm.ShowDialog();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -48,7 +51,7 @@ namespace DormintoryStudentApp.UI
 
         private void ManagementForm_Load(object sender, EventArgs e)
         {
-            lblHello.Text = "Hello " + theStudent.name + ", " + theStudent.studentID;
+            lblHello.Text = "Welcome " + theStudent.name + ", " + theStudent.studentID.ToUpper();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -56,6 +59,11 @@ namespace DormintoryStudentApp.UI
             this.Hide();
             SignInForm signinForm = new SignInForm();
             signinForm.Show();
+        }
+
+        private void ManagementForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

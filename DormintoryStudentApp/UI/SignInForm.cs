@@ -17,6 +17,7 @@ namespace DormintoryStudentApp
         public SignInForm()
         {
             InitializeComponent();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -53,7 +54,16 @@ namespace DormintoryStudentApp
                 }
             }
             
+        }
 
+        private void SignInForm_Load(object sender, EventArgs e)
+        {
+            errorMessage.Text = "";
+        }
+
+        private void SignInForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

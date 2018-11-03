@@ -61,6 +61,7 @@
             // 
             this.lblHello.AutoSize = true;
             this.lblHello.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHello.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lblHello.Location = new System.Drawing.Point(247, 23);
             this.lblHello.Name = "lblHello";
             this.lblHello.Size = new System.Drawing.Size(162, 18);
@@ -331,6 +332,7 @@
             this.Controls.Add(this.lblHello);
             this.Name = "ManagementForm";
             this.Text = "ManagementForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagementForm_FormClosing);
             this.Load += new System.EventHandler(this.ManagementForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

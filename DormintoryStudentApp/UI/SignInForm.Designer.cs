@@ -77,6 +77,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(258, 24);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "student1";
             // 
             // panel1
             // 
@@ -112,6 +113,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(258, 24);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.Text = "123456";
             // 
             // label3
             // 
@@ -150,10 +152,11 @@
             // 
             this.errorMessage.AutoSize = true;
             this.errorMessage.ForeColor = System.Drawing.Color.Red;
-            this.errorMessage.Location = new System.Drawing.Point(309, 409);
+            this.errorMessage.Location = new System.Drawing.Point(335, 409);
             this.errorMessage.Name = "errorMessage";
-            this.errorMessage.Size = new System.Drawing.Size(0, 13);
+            this.errorMessage.Size = new System.Drawing.Size(49, 13);
             this.errorMessage.TabIndex = 7;
+            this.errorMessage.Text = "message";
             // 
             // SignInForm
             // 
@@ -167,6 +170,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignInForm";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignInForm_FormClosing);
+            this.Load += new System.EventHandler(this.SignInForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

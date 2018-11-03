@@ -71,5 +71,27 @@ namespace DormintoryStudentApp.Model
             }
         } // end getTheStudent
 
+
+        public DataTable getStatus(string studentID)
+        {
+            using (SqlConnection conn = DBUltiity.getConnection)
+            {
+                string query = "SELECT * FROM StudentStatus WHERE studentID=@studentID ORDER BY year DESC,month DESC";
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@studentID", studentID);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable statusTable = new DataTable();
+                da.Fill(statusTable);
+
+                return statusTable;
+
+            }
+        } // end getTheStudent
+
     }
 }
