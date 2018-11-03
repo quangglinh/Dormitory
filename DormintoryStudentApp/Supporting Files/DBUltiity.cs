@@ -10,8 +10,6 @@ namespace DormintoryStudentApp.Supporting_Files
 {
     class DBUltiity
     {
-        class DbUtil
-        {
             public static SqlConnection getConnection
             {
                 get
@@ -20,6 +18,5 @@ namespace DormintoryStudentApp.Supporting_Files
                     return new SqlConnection(connectionString);
                 }
             }
-        }
     }
 }
