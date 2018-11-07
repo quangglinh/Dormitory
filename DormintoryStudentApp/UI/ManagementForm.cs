@@ -37,13 +37,6 @@ namespace DormintoryStudentApp.UI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            RoomStatus roomStatusForm = new RoomStatus(theStudent);
-            roomStatusForm.ShowDialog();
-        }
-
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -64,6 +57,34 @@ namespace DormintoryStudentApp.UI
         private void ManagementForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRoomStatus_Click(object sender, EventArgs e)
+        {
+            RoomStatus roomStatusForm = new RoomStatus(this);
+            roomStatusForm.ShowDialog();
+        }
+
+        private void btnRoomExtra_Click(object sender, EventArgs e)
+        {
+            RoomExtra roomExtraForm = new RoomExtra();
+            roomExtraForm.ShowDialog();
+        }
+
+        private void btnCurrentUse_Click(object sender, EventArgs e)
+        {
+            CurrentUse currentUseForm = new CurrentUse();
+            currentUseForm.ShowDialog();
         }
     }
 }
