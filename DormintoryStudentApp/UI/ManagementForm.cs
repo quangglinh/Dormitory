@@ -26,11 +26,7 @@ namespace DormintoryStudentApp.UI
             this.theStudent = theStudent;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ComplainForm complainForm = new ComplainForm(theStudent);
-            complainForm.ShowDialog();
-        }
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
