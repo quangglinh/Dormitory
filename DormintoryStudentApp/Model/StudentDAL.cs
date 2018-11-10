@@ -71,12 +71,13 @@ namespace DormintoryStudentApp.Model
             }
         } // end getTheStudent
 
-
-        public DataTable getStatus(string studentID)
+        public StudentStatus getStudentStatus(string studentID)
         {
             using (SqlConnection conn = DBUltiity.getConnection)
             {
-                string query = "SELECT * FROM StudentStatus WHERE studentID=@studentID ORDER BY year DESC,month DESC";
+                string query = "SELECT Slot.studentID, name, slotNumber, Slot.roomID, dom FROM dbo.Student "
+                + "INNER JOIN dbo.Slot ON Slot.studentID = Student.studentID "
+                + "INNER JOIN dbo.Room ON Room.roomID = Slot.roomID WHERE Student.studentID=@studentID";
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
@@ -87,11 +88,78 @@ namespace DormintoryStudentApp.Model
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable statusTable = new DataTable();
                 da.Fill(statusTable);
+                DataRow row = statusTable.Rows[0];
+                string name = row["name"].ToString();
+                int slotNumber = 0;
+                try {
+                    int.TryParse(row["slotNumber"].ToString(), out slotNumber);
+                } catch (Exception ex)
+                {
 
-                return statusTable;
-
+                }
+                string roomID = row["roomID"].ToString();
+                string dom = row["dom"].ToString();
+                StudentStatus student = new StudentStatus(studentID, name, dom, roomID, slotNumber);
+                return student;
             }
-        } // end getTheStudent
+        }
+        public DataTable getYearByStudentExtra(string studentID)
+        {
+            using (SqlConnection conn = DBUltiity.getConnection)
+            {
+                string query = "SELECT DISTINCT year FROM dbo.StudentStatus WHERE studentID=@studentID";
 
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@studentID", studentID);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                da.Fill(table);
+                return table;
+            }
+        }
+        public DataTable getMonthByStudentExtra(string studentID, int year)
+        {
+            using (SqlConnection conn = DBUltiity.getConnection)
+            {
+                string query = "SELECT DISTINCT month FROM dbo.StudentStatus " 
+                    + "WHERE studentID=@studentID and year=@year";
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@studentID", studentID);
+                cmd.Parameters.AddWithValue("@year", year);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                da.Fill(table);
+                return table;
+            }
+        }
+        public DataRow getBillhByStudentExtra(string studentID, int year, int month)
+        {
+            using (SqlConnection conn = DBUltiity.getConnection)
+            {
+                string query = "SELECT * FROM dbo.StudentStatus "
+                    + "WHERE studentID=@studentID and year=@year and month=@month";
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@studentID", studentID);
+                cmd.Parameters.AddWithValue("@year", year);
+                cmd.Parameters.AddWithValue("@month", month);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                da.Fill(table);
+                DataRow row = table.Rows[0];
+                return row;
+            }
+        }
     }
 }

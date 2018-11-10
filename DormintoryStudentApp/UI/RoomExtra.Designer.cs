@@ -75,6 +75,7 @@
             this.cbbMonth.Name = "cbbMonth";
             this.cbbMonth.Size = new System.Drawing.Size(169, 28);
             this.cbbMonth.TabIndex = 2;
+            this.cbbMonth.SelectedIndexChanged += new System.EventHandler(this.cbbMonth_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -94,6 +95,7 @@
             this.cbbYear.Name = "cbbYear";
             this.cbbYear.Size = new System.Drawing.Size(169, 28);
             this.cbbYear.TabIndex = 2;
+            this.cbbYear.SelectedIndexChanged += new System.EventHandler(this.cbbYear_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -138,7 +140,7 @@
             // txtElectricCost
             // 
             this.txtElectricCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtElectricCost.Location = new System.Drawing.Point(220, 158);
+            this.txtElectricCost.Location = new System.Drawing.Point(241, 157);
             this.txtElectricCost.Name = "txtElectricCost";
             this.txtElectricCost.ReadOnly = true;
             this.txtElectricCost.Size = new System.Drawing.Size(261, 26);
@@ -147,7 +149,7 @@
             // txtWaterCost
             // 
             this.txtWaterCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWaterCost.Location = new System.Drawing.Point(220, 208);
+            this.txtWaterCost.Location = new System.Drawing.Point(241, 207);
             this.txtWaterCost.Name = "txtWaterCost";
             this.txtWaterCost.ReadOnly = true;
             this.txtWaterCost.Size = new System.Drawing.Size(261, 26);
@@ -156,7 +158,7 @@
             // txtExtraFee
             // 
             this.txtExtraFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExtraFee.Location = new System.Drawing.Point(220, 254);
+            this.txtExtraFee.Location = new System.Drawing.Point(241, 253);
             this.txtExtraFee.Name = "txtExtraFee";
             this.txtExtraFee.ReadOnly = true;
             this.txtExtraFee.Size = new System.Drawing.Size(261, 26);
@@ -165,7 +167,7 @@
             // txtExtraContent
             // 
             this.txtExtraContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExtraContent.Location = new System.Drawing.Point(220, 312);
+            this.txtExtraContent.Location = new System.Drawing.Point(241, 311);
             this.txtExtraContent.Name = "txtExtraContent";
             this.txtExtraContent.ReadOnly = true;
             this.txtExtraContent.Size = new System.Drawing.Size(261, 114);
@@ -181,6 +183,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // RoomExtra
             // 
@@ -204,6 +207,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RoomExtra";
             this.Text = "RoomExtra";
+            this.Load += new System.EventHandler(this.RoomExtra_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

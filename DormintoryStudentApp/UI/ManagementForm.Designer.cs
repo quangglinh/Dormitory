@@ -43,9 +43,6 @@
             this.btnRoomExtra = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCurrentUse = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -60,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
@@ -70,9 +66,10 @@
             this.lblHello.AutoSize = true;
             this.lblHello.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHello.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblHello.Location = new System.Drawing.Point(247, 23);
+            this.lblHello.Location = new System.Drawing.Point(329, 71);
+            this.lblHello.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(162, 18);
+            this.lblHello.Size = new System.Drawing.Size(207, 24);
             this.lblHello.TabIndex = 0;
             this.lblHello.Text = "Hello, Phan Xuân Vũ";
             // 
@@ -81,9 +78,10 @@
             this.btnLogout.BackColor = System.Drawing.Color.Brown;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Location = new System.Drawing.Point(609, 17);
+            this.btnLogout.Location = new System.Drawing.Point(848, 64);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 33);
+            this.btnLogout.Size = new System.Drawing.Size(100, 41);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -95,9 +93,10 @@
             this.btnRoomStatus.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRoomStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoomStatus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRoomStatus.Location = new System.Drawing.Point(38, 143);
+            this.btnRoomStatus.Location = new System.Drawing.Point(51, 176);
+            this.btnRoomStatus.Margin = new System.Windows.Forms.Padding(4);
             this.btnRoomStatus.Name = "btnRoomStatus";
-            this.btnRoomStatus.Size = new System.Drawing.Size(171, 103);
+            this.btnRoomStatus.Size = new System.Drawing.Size(228, 127);
             this.btnRoomStatus.TabIndex = 2;
             this.btnRoomStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRoomStatus.UseVisualStyleBackColor = false;
@@ -107,7 +106,8 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(53, 177);
+            this.pictureBox1.Location = new System.Drawing.Point(71, 218);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -117,23 +117,25 @@
             // 
             // searchButton
             // 
-            this.searchButton.BackColor = System.Drawing.Color.SteelBlue;
-            this.searchButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.searchButton.Location = new System.Drawing.Point(277, 143);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(177, 103);
-            this.searchButton.TabIndex = 2;
-            this.searchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.searchButton.UseVisualStyleBackColor = false;
-            this.searchButton.Click += new System.EventHandler(this.button2_Click);
+            this.btnAvailableRoom.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAvailableRoom.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAvailableRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvailableRoom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAvailableRoom.Location = new System.Drawing.Point(369, 176);
+            this.btnAvailableRoom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAvailableRoom.Name = "btnAvailableRoom";
+            this.btnAvailableRoom.Size = new System.Drawing.Size(236, 127);
+            this.btnAvailableRoom.TabIndex = 2;
+            this.btnAvailableRoom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAvailableRoom.UseVisualStyleBackColor = false;
+            this.btnAvailableRoom.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(288, 178);
+            this.pictureBox2.Location = new System.Drawing.Point(384, 219);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -143,22 +145,23 @@
             // 
             // complainButton
             // 
-            this.complainButton.BackColor = System.Drawing.Color.SteelBlue;
-            this.complainButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.complainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.complainButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.complainButton.Location = new System.Drawing.Point(514, 143);
-            this.complainButton.Name = "complainButton";
-            this.complainButton.Size = new System.Drawing.Size(197, 62);
-            this.complainButton.TabIndex = 2;
-            this.complainButton.UseVisualStyleBackColor = false;
-            this.complainButton.Click += new System.EventHandler(this.button2_Click);
+            this.btnRequest.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRequest.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRequest.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRequest.Location = new System.Drawing.Point(514, 143);
+            this.btnRequest.Name = "btnRequest";
+            this.btnRequest.Size = new System.Drawing.Size(197, 62);
+            this.btnRequest.TabIndex = 2;
+            this.btnRequest.UseVisualStyleBackColor = false;
+            this.btnRequest.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(525, 155);
+            this.pictureBox3.Location = new System.Drawing.Point(384, 388);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(36, 36);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -172,9 +175,10 @@
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(95, 187);
+            this.label1.Location = new System.Drawing.Point(127, 230);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 17);
+            this.label1.Size = new System.Drawing.Size(117, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Room Status";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -185,9 +189,10 @@
             this.label2.BackColor = System.Drawing.Color.SteelBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(325, 188);
+            this.label2.Location = new System.Drawing.Point(433, 231);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 17);
+            this.label2.Size = new System.Drawing.Size(139, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Available Room";
             // 
@@ -197,9 +202,10 @@
             this.label3.BackColor = System.Drawing.Color.SteelBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(577, 165);
+            this.label3.Location = new System.Drawing.Point(449, 400);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 17);
+            this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Complain";
             // 
@@ -209,9 +215,10 @@
             this.btnRoomExtra.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRoomExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoomExtra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRoomExtra.Location = new System.Drawing.Point(38, 284);
+            this.btnRoomExtra.Location = new System.Drawing.Point(51, 350);
+            this.btnRoomExtra.Margin = new System.Windows.Forms.Padding(4);
             this.btnRoomExtra.Name = "btnRoomExtra";
-            this.btnRoomExtra.Size = new System.Drawing.Size(171, 100);
+            this.btnRoomExtra.Size = new System.Drawing.Size(228, 123);
             this.btnRoomExtra.TabIndex = 2;
             this.btnRoomExtra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRoomExtra.UseVisualStyleBackColor = false;
@@ -221,7 +228,8 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(49, 315);
+            this.pictureBox4.Location = new System.Drawing.Point(65, 388);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(36, 36);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -235,60 +243,23 @@
             this.label4.BackColor = System.Drawing.Color.SteelBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(91, 325);
+            this.label4.Location = new System.Drawing.Point(121, 400);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 17);
+            this.label4.Size = new System.Drawing.Size(107, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Room Extra";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // btnCurrentUse
-            // 
-            this.btnCurrentUse.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCurrentUse.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCurrentUse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCurrentUse.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCurrentUse.Location = new System.Drawing.Point(277, 284);
-            this.btnCurrentUse.Name = "btnCurrentUse";
-            this.btnCurrentUse.Size = new System.Drawing.Size(177, 100);
-            this.btnCurrentUse.TabIndex = 2;
-            this.btnCurrentUse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCurrentUse.UseVisualStyleBackColor = false;
-            this.btnCurrentUse.Click += new System.EventHandler(this.btnCurrentUse_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(288, 315);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.btnCurrentUse_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.SteelBlue;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(330, 325);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Current Use";
-            this.label5.Click += new System.EventHandler(this.btnCurrentUse_Click);
+            this.label4.Click += new System.EventHandler(this.btnRoomExtra_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Brown;
+            this.button1.BackColor = System.Drawing.Color.Orange;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(570, 56);
+            this.button1.Location = new System.Drawing.Point(639, 64);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 50);
+            this.button1.Size = new System.Drawing.Size(186, 41);
             this.button1.TabIndex = 5;
             this.button1.Text = "Change password";
             this.button1.UseVisualStyleBackColor = false;
@@ -300,9 +271,9 @@
             this.label6.BackColor = System.Drawing.Color.SteelBlue;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(577, 266);
+            this.label6.Location = new System.Drawing.Point(577, 249);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 17);
+            this.label6.Size = new System.Drawing.Size(126, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "Change Room";
             // 
@@ -310,7 +281,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(525, 256);
+            this.pictureBox6.Location = new System.Drawing.Point(525, 239);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(36, 36);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -323,9 +294,9 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(514, 244);
+            this.button2.Location = new System.Drawing.Point(514, 227);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(197, 62);
+            this.button2.Size = new System.Drawing.Size(234, 127);
             this.button2.TabIndex = 6;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -336,9 +307,9 @@
             this.label7.BackColor = System.Drawing.Color.SteelBlue;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(577, 378);
+            this.label7.Location = new System.Drawing.Point(577, 337);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 17);
+            this.label7.Size = new System.Drawing.Size(113, 20);
             this.label7.TabIndex = 11;
             this.label7.Text = "Leave Room";
             // 
@@ -346,7 +317,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(525, 368);
+            this.pictureBox7.Location = new System.Drawing.Point(525, 327);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(36, 36);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -359,9 +330,9 @@
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(514, 356);
+            this.button3.Location = new System.Drawing.Point(514, 315);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 62);
+            this.button3.Size = new System.Drawing.Size(234, 123);
             this.button3.TabIndex = 9;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -398,12 +369,9 @@
             // 
             // ManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 470);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.viewComplain);
+            this.ClientSize = new System.Drawing.Size(741, 448);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.button3);
@@ -413,21 +381,22 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.complainButton);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.btnAvailableRoom);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnCurrentUse);
             this.Controls.Add(this.btnRoomExtra);
             this.Controls.Add(this.btnRoomStatus);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHello);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ManagementForm";
             this.Text = "ManagementForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagementForm_FormClosing);
@@ -436,7 +405,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
@@ -460,9 +428,6 @@
         private System.Windows.Forms.Button btnRoomExtra;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnCurrentUse;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox6;
