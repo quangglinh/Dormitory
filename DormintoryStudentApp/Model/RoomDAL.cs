@@ -1,4 +1,5 @@
-﻿using DormintoryStudentApp.Supporting_Files;
+﻿using DormintoryStudentApp.Entity;
+using DormintoryStudentApp.Supporting_Files;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -106,15 +107,35 @@ namespace DormintoryStudentApp.Model
                 cmd.Parameters.AddWithValue("@roomID", input);
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    return true;
-                }
-
-                return false;
+                return reader.HasRows;
 
             }
         } // end isRoomExisted
+
+        public Slot getSlotByStudentID(string studentID)
+        {
+            
+            using (SqlConnection conn = DBUltiity.getConnection)
+            {
+                Slot theSlot = new Slot();
+                string query = "SELECT * FROM Slot WHERE studentID=@id";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", studentID);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    theSlot.slotNumber = int.Parse(dt.Rows[0][0].ToString());
+                    theSlot.roomID = dt.Rows[0][1].ToString();
+                    theSlot.studentID = dt.Rows[0][2].ToString();
+                    theSlot.isAvailable =  bool.Parse(dt.Rows[0][3].ToString());
+                }
+                return theSlot;
+            }
+           
+        }
 
     }
 }

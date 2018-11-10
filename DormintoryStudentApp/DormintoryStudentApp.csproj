@@ -67,18 +67,62 @@
     <Compile Include="Entity\LeaveRoomRequest.cs" />
     <Compile Include="Entity\ProblemComplain.cs" />
     <Compile Include="Entity\Room.cs" />
+    <Compile Include="Entity\Slot.cs" />
     <Compile Include="Entity\Student.cs" />
     <Compile Include="Entity\StudentAccount.cs" />
     <Compile Include="Entity\StudentStatus.cs" />
+    <Compile Include="Model\StudentAccountDAL.cs" />
     <Compile Include="Model\RequestDAL.cs" />
     <Compile Include="Model\RoomDAL.cs" />
     <Compile Include="Model\StudentDAL.cs" />
     <Compile Include="Supporting Files\DBUltiity.cs" />
+    <Compile Include="UI\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChangeRoomRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChangeRoomRequestForm.Designer.cs">
+      <DependentUpon>ChangeRoomRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChangeRoomRequestHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChangeRoomRequestHistory.Designer.cs">
+      <DependentUpon>ChangeRoomRequestHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ComplainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ComplainForm.Designer.cs">
+      <DependentUpon>ComplainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ComplainHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ComplainHistory.Designer.cs">
+      <DependentUpon>ComplainHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CurrentUse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\CurrentUse.Designer.cs">
       <DependentUpon>CurrentUse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LeaveRoomRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LeaveRoomRequestForm.Designer.cs">
+      <DependentUpon>LeaveRoomRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LeaveRoomRequestHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LeaveRoomRequestHistory.Designer.cs">
+      <DependentUpon>LeaveRoomRequestHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ManagementForm.cs">
       <SubType>Form</SubType>
@@ -112,8 +156,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChangeRoomRequestForm.resx">
+      <DependentUpon>ChangeRoomRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChangeRoomRequestHistory.resx">
+      <DependentUpon>ChangeRoomRequestHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ComplainForm.resx">
+      <DependentUpon>ComplainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ComplainHistory.resx">
+      <DependentUpon>ComplainHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CurrentUse.resx">
       <DependentUpon>CurrentUse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LeaveRoomRequestForm.resx">
+      <DependentUpon>LeaveRoomRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LeaveRoomRequestHistory.resx">
+      <DependentUpon>LeaveRoomRequestHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ManagementForm.resx">
       <DependentUpon>ManagementForm.cs</DependentUpon>
