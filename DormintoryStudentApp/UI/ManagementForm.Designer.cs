@@ -127,7 +127,7 @@
             this.searchButton.TabIndex = 2;
             this.searchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.searchButton.UseVisualStyleBackColor = false;
-            this.searchButton.Click += new System.EventHandler(this.button2_Click);
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // pictureBox2
             // 

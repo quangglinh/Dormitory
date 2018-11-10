@@ -32,6 +32,12 @@ namespace DormintoryStudentApp.UI
             complainForm.ShowDialog();
         }
 
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            SearchRoom searchForm = new SearchRoom();
+            searchForm.ShowDialog();
+        }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 

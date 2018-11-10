@@ -11,7 +11,6 @@ namespace DormintoryStudentApp.UI
 {
     public partial class RoomStatus : Form
     {
-        private ManagementForm parent;
 
         public RoomStatus(ManagementForm parentForm)
         {
