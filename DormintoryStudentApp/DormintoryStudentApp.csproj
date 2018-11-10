@@ -121,6 +121,9 @@
     <EmbeddedResource Include="UI\RoomExtra.resx">
       <DependentUpon>RoomExtra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\RoomStatus.resx">
+      <DependentUpon>RoomStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\SearchRoom.resx">
       <DependentUpon>SearchRoom.cs</DependentUpon>
     </EmbeddedResource>

@@ -71,20 +71,14 @@ namespace DormintoryStudentApp.UI
 
         private void btnRoomStatus_Click(object sender, EventArgs e)
         {
-            RoomStatus roomStatusForm = new RoomStatus(this);
+            RoomStatus roomStatusForm = new RoomStatus(this, theStudent.studentID);
             roomStatusForm.ShowDialog();
         }
 
         private void btnRoomExtra_Click(object sender, EventArgs e)
         {
-            RoomExtra roomExtraForm = new RoomExtra();
+            RoomExtra roomExtraForm = new RoomExtra(theStudent.studentID);
             roomExtraForm.ShowDialog();
-        }
-
-        private void btnCurrentUse_Click(object sender, EventArgs e)
-        {
-            CurrentUse currentUseForm = new CurrentUse();
-            currentUseForm.ShowDialog();
         }
     }
 }
