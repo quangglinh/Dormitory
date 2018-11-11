@@ -30,7 +30,6 @@ namespace DormintoryStudentApp.Model
                     // query successfully
                     string studentID = reader.GetString(2);
                     // string phone = reader.GetString(3);
-                    string phone = "123456";
                     Console.WriteLine(reader.GetString(2));
                     theAccount = new StudentAccount(username, password, studentID);
                 }
