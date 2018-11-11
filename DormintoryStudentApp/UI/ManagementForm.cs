@@ -26,11 +26,7 @@ namespace DormintoryStudentApp.UI
             this.theStudent = theStudent;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ComplainForm complainForm = new ComplainForm(theStudent);
-            complainForm.ShowDialog();
-        }
+
 
         private void searchButton_Click(object sender, EventArgs e)
         {
@@ -77,13 +73,13 @@ namespace DormintoryStudentApp.UI
 
         private void btnRoomStatus_Click(object sender, EventArgs e)
         {
-            RoomStatus roomStatusForm = new RoomStatus(this);
+            RoomStatus roomStatusForm = new RoomStatus(this, theStudent.studentID);
             roomStatusForm.ShowDialog();
         }
 
         private void btnRoomExtra_Click(object sender, EventArgs e)
         {
-            RoomExtra roomExtraForm = new RoomExtra();
+            RoomExtra roomExtraForm = new RoomExtra(theStudent.studentID);
             roomExtraForm.ShowDialog();
         }
 
@@ -91,43 +87,6 @@ namespace DormintoryStudentApp.UI
         {
             CurrentUse currentUseForm = new CurrentUse();
             currentUseForm.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ChangePasswordForm changePassForm = new ChangePasswordForm(theAccount);
-            changePassForm.ShowDialog();
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            ChangeRoomRequestForm changeRoomForm = new ChangeRoomRequestForm(theStudent);
-            changeRoomForm.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            LeaveRoomRequestForm leaveRoomForm = new LeaveRoomRequestForm(theStudent);
-            leaveRoomForm.ShowDialog();
-        }
-
-        private void viewComplain_Click(object sender, EventArgs e)
-        {
-            ComplainHistory complainHistoryForm = new ComplainHistory(theStudent);
-            complainHistoryForm.ShowDialog();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            ChangeRoomRequestHistory form = new ChangeRoomRequestHistory(theStudent);
-            form.ShowDialog();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            LeaveRoomRequestHistory form = new LeaveRoomRequestHistory(theStudent);
-            form.ShowDialog();
         }
     }
 }

@@ -11,6 +11,7 @@ namespace DormintoryStudentApp.Entity
         private string studentName;
         private string dom;
         private int slot;
+        private string room;
 
         public string StudentID
         {
@@ -32,12 +33,18 @@ namespace DormintoryStudentApp.Entity
             get { return this.slot; }
             set { this.slot = value; }
         }
-        public StudentStatus(string StudentID, string StudentName, string Dom, int Slot)
+        public string Room
+        {
+            get { return this.room; }
+            set { this.room = value; }
+        }
+        public StudentStatus(string StudentID, string StudentName, string Dom, string Room, int Slot)
         {
             this.studentID = StudentID;
             this.studentName = StudentName;
             this.dom = Dom;
             this.slot = Slot;
+            this.room = Room;
         }
     }
 }
