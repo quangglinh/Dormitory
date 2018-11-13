@@ -39,5 +39,9 @@ namespace DormitoryManager
         private void button2_Click(object sender, EventArgs e) {
             new StudentCheckin().Show();
         }
+
+        private void button3_Click(object sender, EventArgs e) {
+            new StudentCheckout().Show();
+        }
     }
 }

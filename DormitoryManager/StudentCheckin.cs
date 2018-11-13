@@ -14,6 +14,10 @@ namespace DormitoryManager {
             InitializeComponent();
         }
 
+        public void LoadCheckout() {
+
+        }
+
         private void LoadStudents() {
 
             gbRoom.Enabled = false;
@@ -34,6 +38,7 @@ namespace DormitoryManager {
             } else {
                 lbAvailable.Text = "Not Available";
                 lbAvailable.ForeColor = Color.Red;
+                LoadCheckout();
             }
         }
         private void StudentCheckin_Load(object sender, EventArgs e) {

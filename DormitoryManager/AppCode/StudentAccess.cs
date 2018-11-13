@@ -45,6 +45,45 @@ namespace DormitoryManager.AppCode {
 
             return room;
         }
+
+        public Slot getSlot(string studentID) {
+            try {
+                Slot result = new Slot();
+                DataTable dt = new DataTable();
+                using (SqlConnection conn = DBUtil.getConnection) {
+                    string query = "select * from Slot where studentID=@studentID";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@studentID", studentID);
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    conn.Close();
+                }
+                result.StudentID = studentID;
+                result.RoomID = dt.Rows[0][1].ToString();
+                result.Number = int.Parse(dt.Rows[0][0].ToString());
+                result.Available = false;
+
+                return result;
+            } catch (Exception ex) {
+                return null;
+            }
+        }
+
+        public int Checkout(string studentId) {
+            try {
+                using (SqlConnection conn = DBUtil.getConnection) {
+                    string query = "update Slot set studentID=null, isAvailable= 1 where studentID=@studentID";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@studentID", studentId);
+                    conn.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            } catch (Exception ex) {
+                return 0;
+            }
+        }
+
         
 
         public int Checkin(string studentId, string roomID, int slot) {
