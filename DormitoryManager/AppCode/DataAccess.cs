@@ -66,7 +66,7 @@ namespace DormitoryManager.AppCode
             }
         }
 
-        //Load Available slot of a room
+        //Load Available slots of a room
         public DataTable LoadAvailableSlots(string roomId)
         {
             using (SqlConnection connection = DBUtil.getConnection)
@@ -77,6 +77,34 @@ namespace DormitoryManager.AppCode
                     "where r.roomID = '"+roomId+"' and s.isAvailable = 1";
                 SqlDataAdapter da = new SqlDataAdapter(query, connection);
 
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        //Load student request info
+        public DataTable LoadStudentRequests()
+        {
+            using (SqlConnection connection = DBUtil.getConnection)
+            {
+                DataTable dt = new DataTable();
+                string query = "select statusID from ChangeRoomRequest";
+                SqlDataAdapter da = new SqlDataAdapter(query, connection);
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        //Load student request info
+        public DataTable LoadStudentRequestInfo(string statusId)
+        {
+            using (SqlConnection connection = DBUtil.getConnection)
+            {
+                DataTable dt = new DataTable();
+                string query = "select s.studentID,s.name,c.fromSlot,c.atRoom,c.toSlot,c.toRoom,c.reason,w.[status],w.statusID from " +
+                    "Student s inner join ChangeRoomRequest c on s.studentID = c.studentID " +
+                    "inner join WorkStatus w on c.statusID = w.statusID where w.statusID=" + statusId;
+                SqlDataAdapter da = new SqlDataAdapter(query,connection);
                 da.Fill(dt);
                 return dt;
             }

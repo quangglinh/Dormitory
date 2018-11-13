@@ -30,5 +30,10 @@ namespace DormitoryManager
         {
             new RoomInfoForm().Show();
         }
+
+        private void StudentRequests_Click(object sender, EventArgs e)
+        {
+            new ViewStudentRequest().Show();
+        }
     }
 }
