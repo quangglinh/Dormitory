@@ -67,6 +67,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "View Room\'s Informations";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StudentRequests
             // 
@@ -85,6 +86,7 @@
             this.UpdateRoom.TabIndex = 2;
             this.UpdateRoom.Text = "Update a Room";
             this.UpdateRoom.UseVisualStyleBackColor = true;
+            this.UpdateRoom.Click += new System.EventHandler(this.UpdateRoom_Click);
             // 
             // AddRoom
             // 
