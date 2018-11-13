@@ -31,9 +31,10 @@ namespace DormitoryManager
             txtDom.Text = dt.Rows[0][1].ToString();
             txtFee.Text = dt.Rows[0][2].ToString();
             txtNoS.Text = dt.Rows[0][3].ToString();
-            if (available.Rows[0][0]!=null)
+            if (available.Rows.Count > 0)
             {
                 txtAvailable.Text = "";
+                
                 for (int i = 0; i < available.Rows.Count; i++)
                 {
                     txtAvailable.Text += " " + available.Rows[i][0].ToString();

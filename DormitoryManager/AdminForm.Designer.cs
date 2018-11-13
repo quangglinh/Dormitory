@@ -77,6 +77,7 @@
             this.StudentRequests.TabIndex = 3;
             this.StudentRequests.Text = "View Student\'s Requests";
             this.StudentRequests.UseVisualStyleBackColor = true;
+            this.StudentRequests.Click += new System.EventHandler(this.StudentRequests_Click);
             // 
             // UpdateRoom
             // 

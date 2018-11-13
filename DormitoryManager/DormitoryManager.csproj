@@ -86,6 +86,12 @@
     <Compile Include="RoomInfoForm.Designer.cs">
       <DependentUpon>RoomInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewStudentRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStudentRequest.Designer.cs">
+      <DependentUpon>ViewStudentRequest.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddRoomForm.resx">
       <DependentUpon>AddRoomForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="RoomInfoForm.resx">
       <DependentUpon>RoomInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStudentRequest.resx">
+      <DependentUpon>ViewStudentRequest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
