@@ -52,6 +52,7 @@ namespace DormitoryManager.AppCode
             }
         }
 
+
         //Load Room Information
         public DataTable LoadRoomInfo(string roomId)
         {

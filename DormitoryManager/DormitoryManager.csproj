@@ -72,6 +72,8 @@
     </Compile>
     <Compile Include="AppCode\DataAccess.cs" />
     <Compile Include="AppCode\DBUtil.cs" />
+    <Compile Include="AppCode\Entity.cs" />
+    <Compile Include="AppCode\StudentAccess.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +87,12 @@
     </Compile>
     <Compile Include="RoomInfoForm.Designer.cs">
       <DependentUpon>RoomInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCheckin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentCheckin.Designer.cs">
+      <DependentUpon>StudentCheckin.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewStudentRequest.cs">
       <SubType>Form</SubType>
@@ -109,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="RoomInfoForm.resx">
       <DependentUpon>RoomInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentCheckin.resx">
+      <DependentUpon>StudentCheckin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewStudentRequest.resx">
       <DependentUpon>ViewStudentRequest.cs</DependentUpon>
