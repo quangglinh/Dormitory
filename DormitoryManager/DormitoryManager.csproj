@@ -74,6 +74,7 @@
     <Compile Include="AppCode\DBUtil.cs" />
     <Compile Include="AppCode\Entity.cs" />
     <Compile Include="AppCode\StudentAccess.cs" />
+    <Compile Include="AppCode\UIUtil.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

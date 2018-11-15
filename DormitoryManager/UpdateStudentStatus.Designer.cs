@@ -45,7 +45,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.grStatus = new System.Windows.Forms.GroupBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.txtInfo = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtExtra = new System.Windows.Forms.TextBox();
@@ -58,6 +57,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cbMonth = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtExtraInfo = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.checkComplete = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.gbRoom.SuspendLayout();
             this.grStatus.SuspendLayout();
@@ -101,9 +104,9 @@
             // 
             // txtStudentPhone
             // 
-            this.txtStudentPhone.Enabled = false;
             this.txtStudentPhone.Location = new System.Drawing.Point(133, 143);
             this.txtStudentPhone.Name = "txtStudentPhone";
+            this.txtStudentPhone.ReadOnly = true;
             this.txtStudentPhone.Size = new System.Drawing.Size(245, 22);
             this.txtStudentPhone.TabIndex = 7;
             // 
@@ -118,9 +121,9 @@
             // 
             // txtStudentMail
             // 
-            this.txtStudentMail.Enabled = false;
             this.txtStudentMail.Location = new System.Drawing.Point(133, 114);
             this.txtStudentMail.Name = "txtStudentMail";
+            this.txtStudentMail.ReadOnly = true;
             this.txtStudentMail.Size = new System.Drawing.Size(245, 22);
             this.txtStudentMail.TabIndex = 5;
             // 
@@ -135,9 +138,9 @@
             // 
             // txtStudentName
             // 
-            this.txtStudentName.Enabled = false;
             this.txtStudentName.Location = new System.Drawing.Point(133, 84);
             this.txtStudentName.Name = "txtStudentName";
+            this.txtStudentName.ReadOnly = true;
             this.txtStudentName.Size = new System.Drawing.Size(245, 22);
             this.txtStudentName.TabIndex = 3;
             // 
@@ -180,41 +183,41 @@
             // 
             // txtSlot
             // 
-            this.txtSlot.Enabled = false;
             this.txtSlot.Location = new System.Drawing.Point(109, 54);
             this.txtSlot.Name = "txtSlot";
+            this.txtSlot.ReadOnly = true;
             this.txtSlot.Size = new System.Drawing.Size(121, 22);
             this.txtSlot.TabIndex = 12;
             // 
             // txtRoom
             // 
-            this.txtRoom.Enabled = false;
             this.txtRoom.Location = new System.Drawing.Point(109, 27);
             this.txtRoom.Name = "txtRoom";
+            this.txtRoom.ReadOnly = true;
             this.txtRoom.Size = new System.Drawing.Size(121, 22);
             this.txtRoom.TabIndex = 11;
             // 
             // txtMaxSlot
             // 
-            this.txtMaxSlot.Enabled = false;
             this.txtMaxSlot.Location = new System.Drawing.Point(109, 143);
             this.txtMaxSlot.Name = "txtMaxSlot";
+            this.txtMaxSlot.ReadOnly = true;
             this.txtMaxSlot.Size = new System.Drawing.Size(121, 22);
             this.txtMaxSlot.TabIndex = 10;
             // 
             // txtFee
             // 
-            this.txtFee.Enabled = false;
             this.txtFee.Location = new System.Drawing.Point(109, 114);
             this.txtFee.Name = "txtFee";
+            this.txtFee.ReadOnly = true;
             this.txtFee.Size = new System.Drawing.Size(121, 22);
             this.txtFee.TabIndex = 9;
             // 
             // txtDom
             // 
-            this.txtDom.Enabled = false;
             this.txtDom.Location = new System.Drawing.Point(109, 84);
             this.txtDom.Name = "txtDom";
+            this.txtDom.ReadOnly = true;
             this.txtDom.Size = new System.Drawing.Size(121, 22);
             this.txtDom.TabIndex = 8;
             // 
@@ -265,6 +268,9 @@
             // 
             // grStatus
             // 
+            this.grStatus.Controls.Add(this.checkComplete);
+            this.grStatus.Controls.Add(this.label12);
+            this.grStatus.Controls.Add(this.txtExtraInfo);
             this.grStatus.Controls.Add(this.btnUpdate);
             this.grStatus.Controls.Add(this.txtInfo);
             this.grStatus.Controls.Add(this.label16);
@@ -280,20 +286,10 @@
             this.grStatus.Controls.Add(this.label10);
             this.grStatus.Location = new System.Drawing.Point(12, 204);
             this.grStatus.Name = "grStatus";
-            this.grStatus.Size = new System.Drawing.Size(712, 231);
+            this.grStatus.Size = new System.Drawing.Size(712, 238);
             this.grStatus.TabIndex = 2;
             this.grStatus.TabStop = false;
             this.grStatus.Text = "Status";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(566, 166);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(140, 59);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtInfo
             // 
@@ -314,27 +310,27 @@
             // 
             // txtExtra
             // 
-            this.txtExtra.Location = new System.Drawing.Point(121, 138);
+            this.txtExtra.Location = new System.Drawing.Point(140, 138);
             this.txtExtra.Name = "txtExtra";
-            this.txtExtra.Size = new System.Drawing.Size(244, 22);
+            this.txtExtra.Size = new System.Drawing.Size(225, 22);
             this.txtExtra.TabIndex = 9;
-            this.txtExtra.TextChanged += new System.EventHandler(this.txtExtra_TextChanged);
+            this.txtExtra.TextChanged += new System.EventHandler(this.Valid);
             // 
             // txtWater
             // 
-            this.txtWater.Location = new System.Drawing.Point(121, 105);
+            this.txtWater.Location = new System.Drawing.Point(140, 105);
             this.txtWater.Name = "txtWater";
-            this.txtWater.Size = new System.Drawing.Size(244, 22);
+            this.txtWater.Size = new System.Drawing.Size(225, 22);
             this.txtWater.TabIndex = 8;
-            this.txtWater.TextChanged += new System.EventHandler(this.txtWater_TextChanged);
+            this.txtWater.TextChanged += new System.EventHandler(this.Valid);
             // 
             // txtElec
             // 
-            this.txtElec.Location = new System.Drawing.Point(121, 74);
+            this.txtElec.Location = new System.Drawing.Point(140, 74);
             this.txtElec.Name = "txtElec";
-            this.txtElec.Size = new System.Drawing.Size(244, 22);
+            this.txtElec.Size = new System.Drawing.Size(225, 22);
             this.txtElec.TabIndex = 7;
-            this.txtElec.TextChanged += new System.EventHandler(this.txtElec_TextChanged);
+            this.txtElec.TextChanged += new System.EventHandler(this.Valid);
             // 
             // lbExtraFee
             // 
@@ -415,11 +411,48 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Month";
             // 
+            // txtExtraInfo
+            // 
+            this.txtExtraInfo.Location = new System.Drawing.Point(140, 176);
+            this.txtExtraInfo.Multiline = true;
+            this.txtExtraInfo.Name = "txtExtraInfo";
+            this.txtExtraInfo.Size = new System.Drawing.Size(224, 49);
+            this.txtExtraInfo.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(20, 176);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(114, 17);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Extra Information";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(566, 166);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(140, 59);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // checkComplete
+            // 
+            this.checkComplete.AutoSize = true;
+            this.checkComplete.Location = new System.Drawing.Point(415, 186);
+            this.checkComplete.Name = "checkComplete";
+            this.checkComplete.Size = new System.Drawing.Size(97, 21);
+            this.checkComplete.TabIndex = 14;
+            this.checkComplete.Text = "Completed";
+            this.checkComplete.UseVisualStyleBackColor = true;
+            // 
             // UpdateStudentStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 446);
+            this.ClientSize = new System.Drawing.Size(731, 447);
             this.Controls.Add(this.grStatus);
             this.Controls.Add(this.gbRoom);
             this.Controls.Add(this.groupBox1);
@@ -470,8 +503,11 @@
         private System.Windows.Forms.Label lbExtraFee;
         private System.Windows.Forms.Label lbWaterFee;
         private System.Windows.Forms.Label lbElectricFee;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtInfo;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtExtraInfo;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.CheckBox checkComplete;
     }
 }

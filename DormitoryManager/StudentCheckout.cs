@@ -13,49 +13,31 @@ namespace DormitoryManager {
         public StudentCheckout() {
             InitializeComponent();
         }
-
-        public void LoadCheckout() {
+        public void LoadRoomInfo() {
             Slot slot = new StudentAccess().getSlot(txtStudentId.Text);
             if (slot == null) {
-                txtSlot.Text = txtRoom.Text = txtDom.Text = txtFee.Text = txtMaxSlot.Text = "Not Found";
+                btnCheckout.Enabled = UIUtil.FillRoom(txtRoom, txtSlot, txtDom, txtFee, txtMaxSlot, null, -1);
                 return;
             }
-            txtSlot.Text = slot.Number.ToString();
             Room now = new StudentAccess().GetRoom(slot.RoomID);
-            if (now != null) {
-                txtRoom.Text = now.ID;
-                txtDom.Text = now.Dom;
-                txtFee.Text = now.Fee.ToString();
-                txtMaxSlot.Text = now.NoSlot.ToString();
-
-                btnCheckout.Enabled = true;
-            } else {
-                txtSlot.Text = txtRoom.Text = txtDom.Text = txtFee.Text = txtMaxSlot.Text = "Not Found";
-                
-            }
-
+            btnCheckout.Enabled = UIUtil.FillRoom(txtRoom, txtSlot, txtDom, txtFee, txtMaxSlot, now, slot.Number);
         }
+
+        
 
         private void LoadStudents() {
             btnCheckout.Enabled = false;
-            LoadCheckout();
+            LoadRoomInfo();
             Student student = new StudentAccess().GetStudent(txtStudentId.Text);
+            UIUtil.FillStudent(txtStudentName, txtStudentMail, txtStudentPhone, lbAvailable, student);
             if (student == null) {
-                txtStudentMail.Text = txtStudentName.Text = txtStudentPhone.Text = "Not Found";
-                lbAvailable.Text = "Not Found";
-                lbAvailable.ForeColor = Color.Red;
                 return;
             }
-            txtStudentMail.Text = student.Email;
-            txtStudentName.Text = student.Name;
-            txtStudentPhone.Text = student.Phone;
             if (student.Id.Length > 0 &&  new StudentAccess().isStudentAvailable(txtStudentId.Text)) {
                 lbAvailable.Text = "Not checked in yet";
-                lbAvailable.ForeColor = Color.Red;
-
+                lbAvailable.ForeColor = Color.Orange;
             } else {
-                lbAvailable.Text = "Found!";
-                LoadCheckout();
+                LoadRoomInfo();
                 lbAvailable.ForeColor = Color.Green;
             }
             
@@ -76,7 +58,7 @@ namespace DormitoryManager {
             } else {
                 MessageBox.Show("Checkout failed");
             }
-            txtStudentId.Text = "";
+            LoadStudents();
         }
     }
 
