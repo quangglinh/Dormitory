@@ -44,7 +44,6 @@ namespace DormitoryManager
                     return;
                 }
                 new AdminForm().Show();
-                this.Hide();
             }
         }
 
