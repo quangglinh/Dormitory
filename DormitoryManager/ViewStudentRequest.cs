@@ -16,7 +16,6 @@ namespace DormitoryManager
         {
             InitializeComponent();
             loadRequests();
-            LoadRequestInformation();
         }
         private void loadRequests()
         {
@@ -59,7 +58,7 @@ namespace DormitoryManager
         }
         private void cbRequests_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadRequestInformation();
+            
         }
 
         private void btnApprove_Click(object sender, EventArgs e)

@@ -120,7 +120,7 @@ namespace DormitoryManager.AppCode
                 DataTable dt = new DataTable();
                 string query = "select c.requestID,s.studentID,s.name,c.fromSlot,c.atRoom,c.toSlot,c.toRoom,c.reason,w.[status],w.statusID from " +
                     "Student s inner join ChangeRoomRequest c on s.studentID = c.studentID " +
-                    "inner join WorkStatus w on c.statusID = w.statusID where c.requestID=" + requestID;
+                    "inner join WorkStatus w on c.statusID = w.statusID where c.requestID= " + requestID;
                 SqlDataAdapter da = new SqlDataAdapter(query,connection);
                 da.Fill(dt);
                 return dt;
@@ -148,7 +148,6 @@ namespace DormitoryManager.AppCode
         {
             using (SqlConnection connection = DBUtil.getConnection)
             {
-                // add new room
                 SqlCommand cmd = new SqlCommand("Update Room set monthlyFee = @fee " +
                     "where roomID = @roomID", connection);
                 cmd.Parameters.AddWithValue("@fee", fee);
