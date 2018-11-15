@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbRoom = new System.Windows.Forms.GroupBox();
+            this.btnCheckout = new System.Windows.Forms.Button();
             this.txtSlot = new System.Windows.Forms.TextBox();
             this.txtRoom = new System.Windows.Forms.TextBox();
             this.txtMaxSlot = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCheckout = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gbRoom.SuspendLayout();
             this.SuspendLayout();
@@ -165,43 +165,53 @@
             this.gbRoom.TabStop = false;
             this.gbRoom.Text = "Room";
             // 
+            // btnCheckout
+            // 
+            this.btnCheckout.Location = new System.Drawing.Point(237, 27);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(75, 49);
+            this.btnCheckout.TabIndex = 13;
+            this.btnCheckout.Text = "Check Out";
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            // 
             // txtSlot
             // 
-            this.txtSlot.Enabled = false;
             this.txtSlot.Location = new System.Drawing.Point(109, 54);
             this.txtSlot.Name = "txtSlot";
+            this.txtSlot.ReadOnly = true;
             this.txtSlot.Size = new System.Drawing.Size(121, 22);
             this.txtSlot.TabIndex = 12;
             // 
             // txtRoom
             // 
-            this.txtRoom.Enabled = false;
             this.txtRoom.Location = new System.Drawing.Point(109, 27);
             this.txtRoom.Name = "txtRoom";
+            this.txtRoom.ReadOnly = true;
             this.txtRoom.Size = new System.Drawing.Size(121, 22);
             this.txtRoom.TabIndex = 11;
             // 
             // txtMaxSlot
             // 
-            this.txtMaxSlot.Enabled = false;
             this.txtMaxSlot.Location = new System.Drawing.Point(109, 143);
             this.txtMaxSlot.Name = "txtMaxSlot";
+            this.txtMaxSlot.ReadOnly = true;
             this.txtMaxSlot.Size = new System.Drawing.Size(121, 22);
             this.txtMaxSlot.TabIndex = 10;
             // 
             // txtFee
             // 
-            this.txtFee.Enabled = false;
             this.txtFee.Location = new System.Drawing.Point(109, 114);
             this.txtFee.Name = "txtFee";
+            this.txtFee.ReadOnly = true;
             this.txtFee.Size = new System.Drawing.Size(121, 22);
             this.txtFee.TabIndex = 9;
             // 
             // txtDom
             // 
-            this.txtDom.Enabled = false;
             this.txtDom.Location = new System.Drawing.Point(109, 84);
             this.txtDom.Name = "txtDom";
+            this.txtDom.ReadOnly = true;
             this.txtDom.Size = new System.Drawing.Size(121, 22);
             this.txtDom.TabIndex = 8;
             // 
@@ -249,16 +259,6 @@
             this.label6.Size = new System.Drawing.Size(86, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "Room Name";
-            // 
-            // btnCheckout
-            // 
-            this.btnCheckout.Location = new System.Drawing.Point(237, 27);
-            this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(75, 49);
-            this.btnCheckout.TabIndex = 13;
-            this.btnCheckout.Text = "Check Out";
-            this.btnCheckout.UseVisualStyleBackColor = true;
-            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // StudentCheckout
             // 

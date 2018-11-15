@@ -38,8 +38,8 @@ namespace DormitoryManager.AppCode {
                 room.Dom = dom;
                 room.Fee = fee;
                 room.NoSlot = noS;
-
             } catch (Exception ex) {
+                Console.WriteLine(ex.Message);
                 return null;
             }
 
@@ -63,9 +63,9 @@ namespace DormitoryManager.AppCode {
                 result.RoomID = dt.Rows[0][1].ToString();
                 result.Number = int.Parse(dt.Rows[0][0].ToString());
                 result.Available = false;
-
                 return result;
             } catch (Exception ex) {
+                Console.WriteLine(ex.Message);
                 return null;
             }
         }
@@ -80,6 +80,7 @@ namespace DormitoryManager.AppCode {
                     return cmd.ExecuteNonQuery();
                 }
             } catch (Exception ex) {
+                Console.WriteLine(ex.Message);
                 return 0;
             }
         }
@@ -98,6 +99,7 @@ namespace DormitoryManager.AppCode {
                     return cmd.ExecuteNonQuery();
                 }
             } catch (Exception ex) {
+                Console.WriteLine(ex.Message);
                 return 0;
             }
         }
@@ -138,8 +140,8 @@ namespace DormitoryManager.AppCode {
             try {
                 using (SqlConnection conn = DBUtil.getConnection) {
                     string query = "if (select COUNT(*) from StudentStatus where studentID = @studentID and [month] = @month and [year] = @year) = 0 "
-                    + "insert into StudentStatus(studentID, [month], [year], electricCost, waterCost, extraFee) "
-                    + "values(@studentID, @month, @year, 0, 0, 0)";
+                    + "insert into StudentStatus(studentID, [month], [year], electricCost, waterCost, extraFee, isCompleteFee) "
+                    + "values(@studentID, @month, @year, 0, 0, 0, 0)";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@month", month);
                     cmd.Parameters.AddWithValue("@year", year);
@@ -148,27 +150,31 @@ namespace DormitoryManager.AppCode {
                     return cmd.ExecuteNonQuery();
                 }
             } catch (Exception ex) {
+                Console.WriteLine(ex.Message);
                 return 0;
             }
         }
 
         public int UpdateStudentStatus(StudentStatus studentStatus) {
             try {
-                string query = "update StudentStatus set electricCost = @electric, waterCost = @water, extraFee = @extra, extraFeeContent = @info where studentID = @studentID and[month] = @month and[year] = @year";
+                string query = "update StudentStatus set electricCost = @electric, waterCost = @water, extraFee = @extra, extraFeeContent = @extraInfo, isCompleteFee = @complete, note = @info where studentID = @studentID and[month] = @month and[year] = @year";
                 using (SqlConnection conn = DBUtil.getConnection) {
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@electric", studentStatus.ElectricCost);
                     cmd.Parameters.AddWithValue("@water", studentStatus.WaterCost);
                     cmd.Parameters.AddWithValue("@extra", studentStatus.ExtraFee);
-                    cmd.Parameters.AddWithValue("@info", studentStatus.Desc);
+                    cmd.Parameters.AddWithValue("@extraInfo", studentStatus.ExtraNote);
                     cmd.Parameters.AddWithValue("@studentID", studentStatus.StudentID);
                     cmd.Parameters.AddWithValue("@month", studentStatus.Month);
                     cmd.Parameters.AddWithValue("@year", studentStatus.Year);
+                    cmd.Parameters.AddWithValue("@complete", studentStatus.Complete);
+                    cmd.Parameters.AddWithValue("@info", studentStatus.Note);
                     conn.Open();
                     return cmd.ExecuteNonQuery();
 
                 }
-            } catch (Exception e) {
+            } catch (Exception ex) {
+                Console.WriteLine(ex.Message);
                 return 0;
             }
         }
@@ -196,10 +202,15 @@ namespace DormitoryManager.AppCode {
                     studentStatus.ElectricCost = double.Parse(dt.Rows[0][3].ToString());
                     studentStatus.WaterCost = double.Parse(dt.Rows[0][4].ToString());
                     studentStatus.ExtraFee = double.Parse(dt.Rows[0][5].ToString());
-                    studentStatus.Desc = dt.Rows[0][6].ToString();
+                    studentStatus.ExtraNote = dt.Rows[0][6].ToString();
+                    Console.WriteLine("EEE" + dt.Rows[0][7].ToString());
+                    studentStatus.Complete = dt.Rows[0][7].ToString() == "True" ? true : false;
+                    studentStatus.Note = dt.Rows[0][8].ToString();
+
                     return studentStatus;
                 }
             } catch (Exception ex) {
+                Console.WriteLine(ex.Message);
                 return null;
             }
         }

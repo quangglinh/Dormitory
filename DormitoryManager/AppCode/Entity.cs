@@ -12,7 +12,11 @@ namespace DormitoryManager.AppCode {
         public double ElectricCost { get; set; }
         public double WaterCost { get; set; }
         public double ExtraFee { get; set; }
-        public string Desc { get; set; }
+        public string ExtraNote { get; set; }
+
+        public bool Complete { get; set; }
+        public string Note { get; set; }
+        
 
     }
 

@@ -7,82 +7,61 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DormitoryManager.AppCode;
-
 namespace DormitoryManager {
     public partial class UpdateStudentStatus : Form {
         public UpdateStudentStatus() {
             InitializeComponent();
         }
 
-        public void LoadCheckout() {
-            grStatus.Enabled = false;
+
+        public void LoadRoomInfo() {
             Slot slot = new StudentAccess().getSlot(txtStudentId.Text);
             if (slot == null) {
-                txtSlot.Text = txtRoom.Text = txtDom.Text = txtFee.Text = txtMaxSlot.Text = "Not Found";
+                grStatus.Enabled = UIUtil.FillRoom(txtRoom, txtSlot, txtDom, txtFee, txtMaxSlot, null, -1);
                 return;
             }
-            txtSlot.Text = slot.Number.ToString();
             Room now = new StudentAccess().GetRoom(slot.RoomID);
-            if (now != null) {
-                txtRoom.Text = now.ID;
-                txtDom.Text = now.Dom;
-                txtFee.Text = now.Fee.ToString();
-                txtMaxSlot.Text = now.NoSlot.ToString();
-                grStatus.Enabled = true;
-            } else {
-                txtSlot.Text = txtRoom.Text = txtDom.Text = txtFee.Text = txtMaxSlot.Text = "Not Found";
-
-            }
-
+            grStatus.Enabled = UIUtil.FillRoom(txtRoom, txtSlot, txtDom, txtFee, txtMaxSlot, now, slot.Number);
         }
+
+       
 
         private void LoadStatus() {
 
             string studentID = txtStudentId.Text;
             int month;
             int year;
+            StudentStatus status = null;
             try {
                 studentID = txtStudentId.Text;
                 month = int.Parse(cbMonth.Text);
                 year = int.Parse(cbYear.Text);
-                StudentStatus student = new StudentAccess().GetStudentStatus(studentID, month, year);
-                txtElec.Text = student.ElectricCost.ToString();
-                txtWater.Text = student.WaterCost.ToString();
-                txtExtra.Text = student.ExtraFee.ToString();
-                txtInfo.Text = student.Desc;
+                status = new StudentAccess().GetStudentStatus(studentID, month, year);
             } catch (Exception ex) {
-                txtElec.Text = txtWater.Text = txtExtra.Text = txtInfo.Text = "Not Found!";
+                Console.WriteLine(ex.Message);
+            } finally {
+                btnUpdate.Enabled = UIUtil.FillStatus(txtElec, txtWater, txtExtra, txtExtraInfo, txtInfo, checkComplete,  status);
             }
-
         }
 
         private void LoadStudents() {
-            LoadCheckout();
+            LoadRoomInfo();
             Student student = new StudentAccess().GetStudent(txtStudentId.Text);
-            
+            LoadStatus();
+
+            UIUtil.FillStudent(txtStudentName, txtStudentMail, txtStudentPhone, lbAvailable, student);
             if (student == null) {
-                txtStudentMail.Text = txtStudentName.Text = txtStudentPhone.Text = "Not Found";
-                lbAvailable.Text = "Not Found";
-                lbAvailable.ForeColor = Color.Red;
                 return;
             }
             lbAvailable.Text = "Not checked in yet";
-            
-            lbAvailable.ForeColor = Color.Red;
-            txtStudentMail.Text = student.Email;
-            txtStudentName.Text = student.Name;
-            txtStudentPhone.Text = student.Phone;
-            
+            lbAvailable.ForeColor = Color.Orange;
             if (student.Id.Length > 0 && new StudentAccess().isStudentAvailable(txtStudentId.Text)) {
-                txtElec.Text = txtWater.Text = txtExtra.Text = txtInfo.Text = "Not checked in yet";
-            } else {
-                LoadCheckout();
-                LoadStatus();
+                UIUtil.FillStatus(txtElec, txtWater, txtExtra, txtExtraInfo, txtInfo, checkComplete, null);
+            } else {                
                 lbAvailable.Text = "Found!";
                 lbAvailable.ForeColor = Color.Green;
-
+                LoadRoomInfo();
             }
-
         }
 
         private void LoadMonths() {
@@ -122,11 +101,11 @@ namespace DormitoryManager {
             lb.ForeColor = Color.Green;
             return 1;
         }
-        void Valid() {
+        void CheckValid() {
             btnUpdate.Enabled = false;
             int sum = Valid(txtElec, lbElectricFee) + Valid(txtWater, lbWaterFee) + Valid(txtExtra, lbExtraFee);
             if (sum == 3) btnUpdate.Enabled = true;
-            
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e) {
@@ -137,6 +116,8 @@ namespace DormitoryManager {
                 double electric = double.Parse(txtElec.Text);
                 double water = double.Parse(txtWater.Text);
                 double extra = double.Parse(txtExtra.Text);
+                string extraInfo = txtExtraInfo.Text;
+                bool complete = checkComplete.Checked;
                 string info = txtInfo.Text;
                 StudentStatus newstatus = new StudentStatus() {
                     StudentID = studentID,
@@ -145,11 +126,13 @@ namespace DormitoryManager {
                     ElectricCost = electric,
                     WaterCost = water,
                     ExtraFee = extra,
-                    Desc = info
+                    ExtraNote = extraInfo,
+                    Note = info,
+                    Complete = complete,
                 };
                 if (new StudentAccess().UpdateStudentStatus(newstatus) != 0) {
                     MessageBox.Show("Update Success");
-                    
+
                 } else {
                     MessageBox.Show("Update Failed");
                 }
@@ -157,19 +140,12 @@ namespace DormitoryManager {
             } catch (Exception ex) {
                 MessageBox.Show("Update Failed");
             }
-            
+
         }
 
-        private void txtElec_TextChanged(object sender, EventArgs e) {
-            Valid();
-        }
 
-        private void txtWater_TextChanged(object sender, EventArgs e) {
-            Valid();
-        }
-
-        private void txtExtra_TextChanged(object sender, EventArgs e) {
-            Valid();
+        private void Valid(object sender, EventArgs e) {
+            CheckValid();
         }
     }
 

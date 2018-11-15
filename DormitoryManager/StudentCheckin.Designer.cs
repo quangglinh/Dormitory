@@ -34,17 +34,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbRoom = new System.Windows.Forms.GroupBox();
+            this.btnCheckin = new System.Windows.Forms.Button();
+            this.txtMaxSlot = new System.Windows.Forms.TextBox();
+            this.txtFee = new System.Windows.Forms.TextBox();
+            this.txtDom = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbSlot = new System.Windows.Forms.ComboBox();
+            this.cbRoom = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbRoom = new System.Windows.Forms.ComboBox();
-            this.cbSlot = new System.Windows.Forms.ComboBox();
-            this.btnCheckin = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtDom = new System.Windows.Forms.TextBox();
-            this.txtFee = new System.Windows.Forms.TextBox();
-            this.txtMaxSlot = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.gbRoom.SuspendLayout();
             this.SuspendLayout();
@@ -165,6 +165,88 @@
             this.gbRoom.TabStop = false;
             this.gbRoom.Text = "Room";
             // 
+            // btnCheckin
+            // 
+            this.btnCheckin.Location = new System.Drawing.Point(244, 27);
+            this.btnCheckin.Name = "btnCheckin";
+            this.btnCheckin.Size = new System.Drawing.Size(67, 54);
+            this.btnCheckin.TabIndex = 2;
+            this.btnCheckin.Text = "Check In";
+            this.btnCheckin.UseVisualStyleBackColor = true;
+            this.btnCheckin.Click += new System.EventHandler(this.btnCheckin_Click);
+            // 
+            // txtMaxSlot
+            // 
+            this.txtMaxSlot.Enabled = false;
+            this.txtMaxSlot.Location = new System.Drawing.Point(109, 143);
+            this.txtMaxSlot.Name = "txtMaxSlot";
+            this.txtMaxSlot.Size = new System.Drawing.Size(121, 22);
+            this.txtMaxSlot.TabIndex = 10;
+            // 
+            // txtFee
+            // 
+            this.txtFee.Enabled = false;
+            this.txtFee.Location = new System.Drawing.Point(109, 114);
+            this.txtFee.Name = "txtFee";
+            this.txtFee.Size = new System.Drawing.Size(121, 22);
+            this.txtFee.TabIndex = 9;
+            // 
+            // txtDom
+            // 
+            this.txtDom.Enabled = false;
+            this.txtDom.Location = new System.Drawing.Point(109, 84);
+            this.txtDom.Name = "txtDom";
+            this.txtDom.Size = new System.Drawing.Size(121, 22);
+            this.txtDom.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(17, 143);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 17);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Max Slot";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 117);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 17);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Fee/Month";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 87);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 17);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Dom";
+            // 
+            // cbSlot
+            // 
+            this.cbSlot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSlot.FormattingEnabled = true;
+            this.cbSlot.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbSlot.Location = new System.Drawing.Point(109, 54);
+            this.cbSlot.Name = "cbSlot";
+            this.cbSlot.Size = new System.Drawing.Size(121, 24);
+            this.cbSlot.TabIndex = 4;
+            // 
+            // cbRoom
+            // 
+            this.cbRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRoom.FormattingEnabled = true;
+            this.cbRoom.Location = new System.Drawing.Point(109, 27);
+            this.cbRoom.Name = "cbRoom";
+            this.cbRoom.Size = new System.Drawing.Size(121, 24);
+            this.cbRoom.TabIndex = 3;
+            this.cbRoom.SelectedIndexChanged += new System.EventHandler(this.cbRoom_SelectedIndexChanged);
+            this.cbRoom.TextUpdate += new System.EventHandler(this.cbRoom_SelectedIndexChanged);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -182,87 +264,6 @@
             this.label6.Size = new System.Drawing.Size(86, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "Room Name";
-            // 
-            // cbRoom
-            // 
-            this.cbRoom.FormattingEnabled = true;
-            this.cbRoom.Location = new System.Drawing.Point(109, 27);
-            this.cbRoom.Name = "cbRoom";
-            this.cbRoom.Size = new System.Drawing.Size(121, 24);
-            this.cbRoom.TabIndex = 3;
-            this.cbRoom.SelectedIndexChanged += new System.EventHandler(this.cbRoom_SelectedIndexChanged);
-            this.cbRoom.TextUpdate += new System.EventHandler(this.cbRoom_SelectedIndexChanged);
-            // 
-            // cbSlot
-            // 
-            this.cbSlot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSlot.FormattingEnabled = true;
-            this.cbSlot.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cbSlot.Location = new System.Drawing.Point(109, 54);
-            this.cbSlot.Name = "cbSlot";
-            this.cbSlot.Size = new System.Drawing.Size(121, 24);
-            this.cbSlot.TabIndex = 4;
-            // 
-            // btnCheckin
-            // 
-            this.btnCheckin.Location = new System.Drawing.Point(244, 27);
-            this.btnCheckin.Name = "btnCheckin";
-            this.btnCheckin.Size = new System.Drawing.Size(67, 54);
-            this.btnCheckin.TabIndex = 2;
-            this.btnCheckin.Text = "Check In";
-            this.btnCheckin.UseVisualStyleBackColor = true;
-            this.btnCheckin.Click += new System.EventHandler(this.btnCheckin_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 17);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Dom";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 117);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 17);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Fee/Month";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 143);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 17);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Max Slot";
-            // 
-            // txtDom
-            // 
-            this.txtDom.Enabled = false;
-            this.txtDom.Location = new System.Drawing.Point(109, 84);
-            this.txtDom.Name = "txtDom";
-            this.txtDom.Size = new System.Drawing.Size(121, 22);
-            this.txtDom.TabIndex = 8;
-            // 
-            // txtFee
-            // 
-            this.txtFee.Enabled = false;
-            this.txtFee.Location = new System.Drawing.Point(109, 114);
-            this.txtFee.Name = "txtFee";
-            this.txtFee.Size = new System.Drawing.Size(121, 22);
-            this.txtFee.TabIndex = 9;
-            // 
-            // txtMaxSlot
-            // 
-            this.txtMaxSlot.Enabled = false;
-            this.txtMaxSlot.Location = new System.Drawing.Point(109, 143);
-            this.txtMaxSlot.Name = "txtMaxSlot";
-            this.txtMaxSlot.Size = new System.Drawing.Size(121, 22);
-            this.txtMaxSlot.TabIndex = 10;
             // 
             // StudentCheckin
             // 
