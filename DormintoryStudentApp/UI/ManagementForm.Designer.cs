@@ -66,7 +66,7 @@
             this.lblHello.AutoSize = true;
             this.lblHello.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHello.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblHello.Location = new System.Drawing.Point(329, 71);
+            this.lblHello.Location = new System.Drawing.Point(51, 49);
             this.lblHello.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHello.Name = "lblHello";
             this.lblHello.Size = new System.Drawing.Size(207, 24);
@@ -78,7 +78,7 @@
             this.btnLogout.BackColor = System.Drawing.Color.Brown;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Location = new System.Drawing.Point(848, 64);
+            this.btnLogout.Location = new System.Drawing.Point(749, 41);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(100, 41);
@@ -93,7 +93,7 @@
             this.btnRoomStatus.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRoomStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoomStatus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRoomStatus.Location = new System.Drawing.Point(51, 176);
+            this.btnRoomStatus.Location = new System.Drawing.Point(41, 139);
             this.btnRoomStatus.Margin = new System.Windows.Forms.Padding(4);
             this.btnRoomStatus.Name = "btnRoomStatus";
             this.btnRoomStatus.Size = new System.Drawing.Size(228, 127);
@@ -106,7 +106,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(71, 218);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 181);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 36);
@@ -121,9 +121,9 @@
             this.searchButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.searchButton.Location = new System.Drawing.Point(277, 143);
+            this.searchButton.Location = new System.Drawing.Point(324, 139);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(177, 103);
+            this.searchButton.Size = new System.Drawing.Size(241, 127);
             this.searchButton.TabIndex = 2;
             this.searchButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.searchButton.UseVisualStyleBackColor = false;
@@ -133,7 +133,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(384, 219);
+            this.pictureBox2.Location = new System.Drawing.Point(347, 181);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 36);
@@ -148,9 +148,9 @@
             this.complainButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.complainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.complainButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.complainButton.Location = new System.Drawing.Point(514, 143);
+            this.complainButton.Location = new System.Drawing.Point(324, 313);
             this.complainButton.Name = "complainButton";
-            this.complainButton.Size = new System.Drawing.Size(197, 62);
+            this.complainButton.Size = new System.Drawing.Size(241, 123);
             this.complainButton.TabIndex = 2;
             this.complainButton.UseVisualStyleBackColor = false;
             this.complainButton.Click += new System.EventHandler(this.button2_Click);
@@ -159,7 +159,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(384, 388);
+            this.pictureBox3.Location = new System.Drawing.Point(347, 351);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(36, 36);
@@ -174,7 +174,7 @@
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(127, 230);
+            this.label1.Location = new System.Drawing.Point(111, 191);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 20);
@@ -188,7 +188,7 @@
             this.label2.BackColor = System.Drawing.Color.SteelBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(433, 231);
+            this.label2.Location = new System.Drawing.Point(391, 191);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 20);
@@ -201,7 +201,7 @@
             this.label3.BackColor = System.Drawing.Color.SteelBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(449, 400);
+            this.label3.Location = new System.Drawing.Point(405, 358);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
@@ -214,7 +214,7 @@
             this.btnRoomExtra.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRoomExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoomExtra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRoomExtra.Location = new System.Drawing.Point(51, 350);
+            this.btnRoomExtra.Location = new System.Drawing.Point(41, 313);
             this.btnRoomExtra.Margin = new System.Windows.Forms.Padding(4);
             this.btnRoomExtra.Name = "btnRoomExtra";
             this.btnRoomExtra.Size = new System.Drawing.Size(228, 123);
@@ -227,7 +227,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(65, 388);
+            this.pictureBox4.Location = new System.Drawing.Point(55, 351);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(36, 36);
@@ -242,7 +242,7 @@
             this.label4.BackColor = System.Drawing.Color.SteelBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(121, 400);
+            this.label4.Location = new System.Drawing.Point(111, 358);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 20);
@@ -255,7 +255,7 @@
             this.button1.BackColor = System.Drawing.Color.Orange;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(639, 64);
+            this.button1.Location = new System.Drawing.Point(502, 41);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 41);
@@ -270,7 +270,7 @@
             this.label6.BackColor = System.Drawing.Color.SteelBlue;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(769, 229);
+            this.label6.Location = new System.Drawing.Point(684, 191);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 20);
@@ -281,7 +281,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(713, 218);
+            this.pictureBox6.Location = new System.Drawing.Point(640, 181);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(36, 36);
@@ -295,7 +295,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(700, 176);
+            this.button2.Location = new System.Drawing.Point(615, 139);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(234, 127);
@@ -309,7 +309,7 @@
             this.label7.BackColor = System.Drawing.Color.SteelBlue;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(769, 400);
+            this.label7.Location = new System.Drawing.Point(684, 358);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 20);
@@ -320,7 +320,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(713, 388);
+            this.pictureBox7.Location = new System.Drawing.Point(641, 351);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(36, 36);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -333,7 +333,7 @@
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(700, 350);
+            this.button3.Location = new System.Drawing.Point(615, 312);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(234, 123);
@@ -343,7 +343,7 @@
             // 
             // viewComplain
             // 
-            this.viewComplain.Location = new System.Drawing.Point(636, 211);
+            this.viewComplain.Location = new System.Drawing.Point(409, 395);
             this.viewComplain.Name = "viewComplain";
             this.viewComplain.Size = new System.Drawing.Size(75, 23);
             this.viewComplain.TabIndex = 12;
@@ -353,7 +353,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(636, 312);
+            this.button5.Location = new System.Drawing.Point(704, 224);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 13;
@@ -363,7 +363,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(636, 424);
+            this.button6.Location = new System.Drawing.Point(704, 395);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 14;
@@ -375,7 +375,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 470);
+            this.ClientSize = new System.Drawing.Size(887, 487);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.viewComplain);
@@ -394,7 +394,6 @@
             this.Controls.Add(this.complainButton);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRoomExtra);
