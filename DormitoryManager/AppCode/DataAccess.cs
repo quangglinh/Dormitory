@@ -113,7 +113,19 @@ namespace DormitoryManager.AppCode
             }
         }
 
-        //Load student request info
+        //Load Leave request info
+        public DataTable LoadLeaveRoomRequests()
+        {
+            using (SqlConnection connection = DBUtil.getConnection)
+            {
+                DataTable dt = new DataTable();
+                string query = "select requestID from LeaveRoomRequest";
+                SqlDataAdapter da = new SqlDataAdapter(query, connection);
+                da.Fill(dt);
+                return dt;
+            }
+        } 
+        //Load change request info
         public DataTable LoadStudentRequestInfo(int requestID)
         {
             using (SqlConnection connection = DBUtil.getConnection)
@@ -129,17 +141,34 @@ namespace DormitoryManager.AppCode
                 return dt;
             }
         }
+        //Load leave request info
+        public DataTable LoadLeaveRequestInfo(int requestID)
+        {
+            using (SqlConnection connection = DBUtil.getConnection)
+            {
+                DataTable dt = new DataTable();
+                string query = "select c.requestID,s.studentID,s.name,c.fromSlot,c.atRoom,w.[status] from " +
+                    "Student s inner join LeaveRoomRequest c on s.studentID = c.studentID " +
+                    "inner join WorkStatus w on c.statusID = w.statusID where c.requestID = @requestID";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@requestID", requestID);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                return dt;
+            }
+        }
 
         //Update request
-        public void UpdateRequest(int requestId, int statusId)
+        public void UpdateRequest(int requestId, int statusId, string type)
         {
             using (SqlConnection connection = DBUtil.getConnection)
             {
                 // add new room
-                SqlCommand cmd = new SqlCommand("Update ChangeRoomRequest set statusID = @statusId " +
+                SqlCommand cmd = new SqlCommand("Update @type set statusID = @statusId " +
                     "where requestID = @requestId", connection);
                 cmd.Parameters.AddWithValue("@statusId", statusId);
                 cmd.Parameters.AddWithValue("@requestId", requestId);
+                cmd.Parameters.AddWithValue("@type", type);
                 connection.Open();
                 cmd.ExecuteNonQuery();
                 connection.Close();

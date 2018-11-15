@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DormitoryManager
 {
-    public partial class ViewStudentRequest : Form
+    public partial class ViewChangeRequest : Form
     {
-        public ViewStudentRequest()
+        public ViewChangeRequest()
         {
             InitializeComponent();
             loadRequests();
@@ -73,21 +73,28 @@ namespace DormitoryManager
 
         private void btnApprove_Click(object sender, EventArgs e)
         {
-            new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 3);
+            new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 3, "ChangeRoomRequest");
             MessageBox.Show("Update successful!");
 
         }
 
         private void btnReject_Click(object sender, EventArgs e)
         {
-            new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 4);
+            new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 4, "ChangeRoomRequest");
             MessageBox.Show("Update successful!");
         }
 
         private void btnQueue_Click(object sender, EventArgs e)
         {
-            new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 2);
+            new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 2, "ChangeRoomRequest");
             MessageBox.Show("Update successful!");
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            ChangeRoom ttmp = new ChangeRoom();
+            ttmp.Show();
+            ttmp.Import(txtId.Text, new AppCode.Slot() { Number = int.Parse(txtFromSlot.Text), RoomID = txtFromRoom.Text }, new AppCode.Slot() { Number = int.Parse(txtToSlot.Text), RoomID = txtToRoom.Text });
         }
     }
 }

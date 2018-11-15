@@ -1,6 +1,6 @@
 ﻿namespace DormitoryManager
 {
-    partial class ViewStudentRequest
+    partial class ViewChangeRequest
     {
         /// <summary>
         /// Required designer variable.
@@ -36,11 +36,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtToRoom = new System.Windows.Forms.TextBox();
-            this.txtToSlot = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtReason = new System.Windows.Forms.RichTextBox();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -51,9 +46,15 @@
             this.btnApprove = new System.Windows.Forms.Button();
             this.btnReject = new System.Windows.Forms.Button();
             this.btnQueue = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtToSlot = new System.Windows.Forms.TextBox();
+            this.txtToRoom = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCheckOut = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -129,59 +130,12 @@
             this.txtName.Size = new System.Drawing.Size(199, 20);
             this.txtName.TabIndex = 5;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtToRoom);
-            this.groupBox2.Controls.Add(this.txtToSlot);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(33, 308);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(273, 125);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "To";
-            // 
-            // txtToRoom
-            // 
-            this.txtToRoom.Location = new System.Drawing.Point(48, 71);
-            this.txtToRoom.Name = "txtToRoom";
-            this.txtToRoom.ReadOnly = true;
-            this.txtToRoom.Size = new System.Drawing.Size(126, 20);
-            this.txtToRoom.TabIndex = 7;
-            // 
-            // txtToSlot
-            // 
-            this.txtToSlot.Location = new System.Drawing.Point(48, 19);
-            this.txtToSlot.Name = "txtToSlot";
-            this.txtToSlot.ReadOnly = true;
-            this.txtToSlot.Size = new System.Drawing.Size(126, 20);
-            this.txtToSlot.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Room";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Slot";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtReason);
             this.groupBox3.Location = new System.Drawing.Point(312, 152);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(243, 281);
+            this.groupBox3.Size = new System.Drawing.Size(243, 122);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Reason";
@@ -191,7 +145,7 @@
             this.txtReason.Location = new System.Drawing.Point(7, 20);
             this.txtReason.Name = "txtReason";
             this.txtReason.ReadOnly = true;
-            this.txtReason.Size = new System.Drawing.Size(228, 255);
+            this.txtReason.Size = new System.Drawing.Size(228, 87);
             this.txtReason.TabIndex = 0;
             this.txtReason.Text = "";
             // 
@@ -268,11 +222,72 @@
             this.btnQueue.UseVisualStyleBackColor = true;
             this.btnQueue.Click += new System.EventHandler(this.btnQueue_Click);
             // 
-            // ViewStudentRequest
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Slot";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Room";
+            // 
+            // txtToSlot
+            // 
+            this.txtToSlot.Location = new System.Drawing.Point(48, 19);
+            this.txtToSlot.Name = "txtToSlot";
+            this.txtToSlot.ReadOnly = true;
+            this.txtToSlot.Size = new System.Drawing.Size(126, 20);
+            this.txtToSlot.TabIndex = 6;
+            // 
+            // txtToRoom
+            // 
+            this.txtToRoom.Location = new System.Drawing.Point(48, 71);
+            this.txtToRoom.Name = "txtToRoom";
+            this.txtToRoom.ReadOnly = true;
+            this.txtToRoom.Size = new System.Drawing.Size(126, 20);
+            this.txtToRoom.TabIndex = 7;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtToRoom);
+            this.groupBox2.Controls.Add(this.txtToSlot);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Location = new System.Drawing.Point(33, 308);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(273, 125);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "To";
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckOut.ForeColor = System.Drawing.Color.White;
+            this.btnCheckOut.Location = new System.Drawing.Point(360, 342);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(121, 57);
+            this.btnCheckOut.TabIndex = 30;
+            this.btnCheckOut.Text = "Check out";
+            this.btnCheckOut.UseVisualStyleBackColor = false;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
+            // 
+            // ViewChangeRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 476);
+            this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnQueue);
             this.Controls.Add(this.btnReject);
             this.Controls.Add(this.btnApprove);
@@ -287,13 +302,13 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "ViewStudentRequest";
+            this.Name = "ViewChangeRequest";
             this.Text = "ViewStudentRequest";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,11 +324,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtToRoom;
-        private System.Windows.Forms.TextBox txtToSlot;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RichTextBox txtReason;
         private System.Windows.Forms.TextBox txtId;
@@ -324,5 +334,11 @@
         private System.Windows.Forms.Button btnApprove;
         private System.Windows.Forms.Button btnReject;
         private System.Windows.Forms.Button btnQueue;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtToSlot;
+        private System.Windows.Forms.TextBox txtToRoom;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnCheckOut;
     }
 }
