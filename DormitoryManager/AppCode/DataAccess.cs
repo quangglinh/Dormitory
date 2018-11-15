@@ -9,6 +9,22 @@ namespace DormitoryManager.AppCode
 {
     class DataAccess
     {
+        //get manager id
+        public DataTable LoadManager(string username, string password)
+        {
+            using (SqlConnection connection = DBUtil.getConnection)
+            {
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("Select * from ManagerAccount " +
+                    "where username = @username " +
+                    "and password = @password", connection);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                return dt;
+            }
+        }
         //Add new Room
         public void AddNewRoom(string roomId, string dom, float fee, int slot)
         {
