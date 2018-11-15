@@ -1,5 +1,5 @@
 ﻿namespace DormitoryManager {
-    partial class StudentCheckin {
+    partial class ChangeRoom {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbRoom = new System.Windows.Forms.GroupBox();
-            this.btnCheckin = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
             this.txtMaxSlot = new System.Windows.Forms.TextBox();
             this.txtFee = new System.Windows.Forms.TextBox();
             this.txtDom = new System.Windows.Forms.TextBox();
@@ -45,8 +45,20 @@
             this.cbRoom = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtFromSlot = new System.Windows.Forms.TextBox();
+            this.txtFromRoom = new System.Windows.Forms.TextBox();
+            this.txtFromMaxSlot = new System.Windows.Forms.TextBox();
+            this.txtFromFee = new System.Windows.Forms.TextBox();
+            this.txtFromDom = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbRoom.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -147,7 +159,7 @@
             // 
             // gbRoom
             // 
-            this.gbRoom.Controls.Add(this.btnCheckin);
+            this.gbRoom.Controls.Add(this.btnChange);
             this.gbRoom.Controls.Add(this.txtMaxSlot);
             this.gbRoom.Controls.Add(this.txtFee);
             this.gbRoom.Controls.Add(this.txtDom);
@@ -158,44 +170,44 @@
             this.gbRoom.Controls.Add(this.cbRoom);
             this.gbRoom.Controls.Add(this.label5);
             this.gbRoom.Controls.Add(this.label6);
-            this.gbRoom.Location = new System.Drawing.Point(407, 12);
+            this.gbRoom.Location = new System.Drawing.Point(654, 12);
             this.gbRoom.Name = "gbRoom";
-            this.gbRoom.Size = new System.Drawing.Size(317, 186);
+            this.gbRoom.Size = new System.Drawing.Size(330, 186);
             this.gbRoom.TabIndex = 1;
             this.gbRoom.TabStop = false;
-            this.gbRoom.Text = "Room";
+            this.gbRoom.Text = "To";
             // 
-            // btnCheckin
+            // btnChange
             // 
-            this.btnCheckin.Location = new System.Drawing.Point(244, 27);
-            this.btnCheckin.Name = "btnCheckin";
-            this.btnCheckin.Size = new System.Drawing.Size(67, 54);
-            this.btnCheckin.TabIndex = 2;
-            this.btnCheckin.Text = "Check In";
-            this.btnCheckin.UseVisualStyleBackColor = true;
-            this.btnCheckin.Click += new System.EventHandler(this.btnCheckin_Click);
+            this.btnChange.Location = new System.Drawing.Point(242, 27);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(80, 54);
+            this.btnChange.TabIndex = 2;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
             // txtMaxSlot
             // 
+            this.txtMaxSlot.Enabled = false;
             this.txtMaxSlot.Location = new System.Drawing.Point(109, 143);
             this.txtMaxSlot.Name = "txtMaxSlot";
-            this.txtMaxSlot.ReadOnly = true;
             this.txtMaxSlot.Size = new System.Drawing.Size(121, 22);
             this.txtMaxSlot.TabIndex = 10;
             // 
             // txtFee
             // 
+            this.txtFee.Enabled = false;
             this.txtFee.Location = new System.Drawing.Point(109, 114);
             this.txtFee.Name = "txtFee";
-            this.txtFee.ReadOnly = true;
             this.txtFee.Size = new System.Drawing.Size(121, 22);
             this.txtFee.TabIndex = 9;
             // 
             // txtDom
             // 
+            this.txtDom.Enabled = false;
             this.txtDom.Location = new System.Drawing.Point(109, 84);
             this.txtDom.Name = "txtDom";
-            this.txtDom.ReadOnly = true;
             this.txtDom.Size = new System.Drawing.Size(121, 22);
             this.txtDom.TabIndex = 8;
             // 
@@ -265,20 +277,127 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Room Name";
             // 
-            // StudentCheckin
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtFromSlot);
+            this.groupBox2.Controls.Add(this.txtFromRoom);
+            this.groupBox2.Controls.Add(this.txtFromMaxSlot);
+            this.groupBox2.Controls.Add(this.txtFromFee);
+            this.groupBox2.Controls.Add(this.txtFromDom);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Location = new System.Drawing.Point(407, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(241, 186);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "From";
+            // 
+            // txtFromSlot
+            // 
+            this.txtFromSlot.Location = new System.Drawing.Point(109, 54);
+            this.txtFromSlot.Name = "txtFromSlot";
+            this.txtFromSlot.ReadOnly = true;
+            this.txtFromSlot.Size = new System.Drawing.Size(121, 22);
+            this.txtFromSlot.TabIndex = 12;
+            // 
+            // txtFromRoom
+            // 
+            this.txtFromRoom.Location = new System.Drawing.Point(109, 27);
+            this.txtFromRoom.Name = "txtFromRoom";
+            this.txtFromRoom.ReadOnly = true;
+            this.txtFromRoom.Size = new System.Drawing.Size(121, 22);
+            this.txtFromRoom.TabIndex = 11;
+            // 
+            // txtFromMaxSlot
+            // 
+            this.txtFromMaxSlot.Location = new System.Drawing.Point(109, 143);
+            this.txtFromMaxSlot.Name = "txtFromMaxSlot";
+            this.txtFromMaxSlot.ReadOnly = true;
+            this.txtFromMaxSlot.Size = new System.Drawing.Size(121, 22);
+            this.txtFromMaxSlot.TabIndex = 10;
+            // 
+            // txtFromFee
+            // 
+            this.txtFromFee.Location = new System.Drawing.Point(109, 114);
+            this.txtFromFee.Name = "txtFromFee";
+            this.txtFromFee.ReadOnly = true;
+            this.txtFromFee.Size = new System.Drawing.Size(121, 22);
+            this.txtFromFee.TabIndex = 9;
+            // 
+            // txtFromDom
+            // 
+            this.txtFromDom.Location = new System.Drawing.Point(109, 84);
+            this.txtFromDom.Name = "txtFromDom";
+            this.txtFromDom.ReadOnly = true;
+            this.txtFromDom.Size = new System.Drawing.Size(121, 22);
+            this.txtFromDom.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 143);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 17);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Max Slot";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 117);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 17);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Fee/Month";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 87);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 17);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Dom";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(17, 57);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(32, 17);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Slot";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(17, 30);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 17);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Room Name";
+            // 
+            // ChangeRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 202);
+            this.ClientSize = new System.Drawing.Size(991, 202);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbRoom);
             this.Controls.Add(this.groupBox1);
-            this.Name = "StudentCheckin";
-            this.Text = "Check In";
+            this.Name = "ChangeRoom";
+            this.Text = "Change Room";
             this.Load += new System.EventHandler(this.StudentCheckin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbRoom.ResumeLayout(false);
             this.gbRoom.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -300,12 +419,23 @@
         private System.Windows.Forms.ComboBox cbRoom;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnCheckin;
+        private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.TextBox txtMaxSlot;
         private System.Windows.Forms.TextBox txtFee;
         private System.Windows.Forms.TextBox txtDom;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtFromSlot;
+        private System.Windows.Forms.TextBox txtFromRoom;
+        private System.Windows.Forms.TextBox txtFromMaxSlot;
+        private System.Windows.Forms.TextBox txtFromFee;
+        private System.Windows.Forms.TextBox txtFromDom;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

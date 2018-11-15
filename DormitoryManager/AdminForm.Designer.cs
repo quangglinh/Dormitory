@@ -35,9 +35,11 @@
             this.UpdateRoom = new System.Windows.Forms.Button();
             this.AddRoom = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnLeaveRoomRequest = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +56,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnLeaveRoomRequest);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.StudentRequests);
             this.panel1.Controls.Add(this.UpdateRoom);
@@ -65,7 +68,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(33, 153);
+            this.button1.Location = new System.Drawing.Point(33, 201);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(298, 23);
             this.button1.TabIndex = 4;
@@ -79,7 +82,7 @@
             this.StudentRequests.Name = "StudentRequests";
             this.StudentRequests.Size = new System.Drawing.Size(298, 23);
             this.StudentRequests.TabIndex = 3;
-            this.StudentRequests.Text = "View Student\'s Requests";
+            this.StudentRequests.Text = "View Change Room Requests";
             this.StudentRequests.UseVisualStyleBackColor = true;
             this.StudentRequests.Click += new System.EventHandler(this.StudentRequests_Click);
             // 
@@ -105,6 +108,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
@@ -113,12 +117,22 @@
             this.panel2.Size = new System.Drawing.Size(368, 338);
             this.panel2.TabIndex = 2;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(37, 153);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(298, 23);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Change Room";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(37, 110);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(37, 108);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(298, 19);
+            this.button4.Size = new System.Drawing.Size(298, 23);
             this.button4.TabIndex = 5;
             this.button4.Text = "Update Student Status";
             this.button4.UseVisualStyleBackColor = true;
@@ -127,7 +141,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(37, 67);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(298, 19);
             this.button3.TabIndex = 4;
@@ -138,13 +152,23 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(37, 24);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(298, 19);
             this.button2.TabIndex = 3;
             this.button2.Text = "Student Checkin";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnLeaveRoomRequest
+            // 
+            this.btnLeaveRoomRequest.Location = new System.Drawing.Point(33, 153);
+            this.btnLeaveRoomRequest.Name = "btnLeaveRoomRequest";
+            this.btnLeaveRoomRequest.Size = new System.Drawing.Size(298, 23);
+            this.btnLeaveRoomRequest.TabIndex = 5;
+            this.btnLeaveRoomRequest.Text = "View Leave Room Requests";
+            this.btnLeaveRoomRequest.UseVisualStyleBackColor = true;
+            this.btnLeaveRoomRequest.Click += new System.EventHandler(this.btnLeaveRoomRequest_Click);
             // 
             // AdminForm
             // 
@@ -175,6 +199,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnLeaveRoomRequest;
     }
 }
 

@@ -60,6 +60,16 @@ namespace DormitoryManager {
             }
             LoadStudents();
         }
+
+        public void Import(string studentID, Slot from) {
+            txtStudentId.Text = studentID;
+            Slot origin = new StudentAccess().getSlot(studentID);
+            if (origin.Number != from.Number || origin.RoomID != from.RoomID) {
+                MessageBox.Show("Request has expired");
+                this.Close();
+            }
+
+        }
     }
 
 

@@ -95,6 +95,12 @@
     <Compile Include="UpdateRoom.Designer.cs">
       <DependentUpon>UpdateRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeRoom.Designer.cs">
+      <DependentUpon>ChangeRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentCheckout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,11 +119,17 @@
     <Compile Include="UpdateStudentStatus.Designer.cs">
       <DependentUpon>UpdateStudentStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewStudentRequest.cs">
+    <Compile Include="ViewChangeRequest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewStudentRequest.Designer.cs">
-      <DependentUpon>ViewStudentRequest.cs</DependentUpon>
+    <Compile Include="ViewChangeRequest.Designer.cs">
+      <DependentUpon>ViewChangeRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLeaveRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLeaveRequest.Designer.cs">
+      <DependentUpon>ViewLeaveRequest.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddRoomForm.resx">
       <DependentUpon>AddRoomForm.cs</DependentUpon>
@@ -143,6 +155,9 @@
     <EmbeddedResource Include="UpdateRoom.resx">
       <DependentUpon>UpdateRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeRoom.resx">
+      <DependentUpon>ChangeRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentCheckout.resx">
       <DependentUpon>StudentCheckout.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,8 +167,11 @@
     <EmbeddedResource Include="UpdateStudentStatus.resx">
       <DependentUpon>UpdateStudentStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewStudentRequest.resx">
-      <DependentUpon>ViewStudentRequest.cs</DependentUpon>
+    <EmbeddedResource Include="ViewChangeRequest.resx">
+      <DependentUpon>ViewChangeRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLeaveRequest.resx">
+      <DependentUpon>ViewLeaveRequest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

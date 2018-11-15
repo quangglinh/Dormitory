@@ -33,19 +33,32 @@ namespace DormitoryManager
 
         private void StudentRequests_Click(object sender, EventArgs e)
         {
-            new ViewStudentRequest().Show();
+            new ViewChangeRequest().Show();
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            new StudentCheckin().Show();
+            var tmp = new StudentCheckin();
+            tmp.Show();
         }
 
         private void button3_Click(object sender, EventArgs e) {
-            new StudentCheckout().Show();
+            var tmp = new StudentCheckout();
+            tmp.Show();
+
         }
 
         private void button4_Click(object sender, EventArgs e) {
             new UpdateStudentStatus().Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e) {
+            ChangeRoom ttmp = new ChangeRoom();
+            ttmp.Show();
+        }
+
+        private void btnLeaveRoomRequest_Click(object sender, EventArgs e)
+        {
+            new ViewLeaveRequest().Show();
         }
     }
 }
