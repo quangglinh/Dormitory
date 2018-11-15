@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,8 +46,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,11 +63,84 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\ChangeRoomRequest.cs" />
+    <Compile Include="Entity\LeaveRoomRequest.cs" />
+    <Compile Include="Entity\ProblemComplain.cs" />
+    <Compile Include="Entity\Room.cs" />
+    <Compile Include="Entity\Slot.cs" />
+    <Compile Include="Entity\Student.cs" />
+    <Compile Include="Entity\StudentAccount.cs" />
+    <Compile Include="Entity\StudentStatus.cs" />
+    <Compile Include="Model\StudentAccountDAL.cs" />
+    <Compile Include="Model\RequestDAL.cs" />
+    <Compile Include="Model\RoomDAL.cs" />
+    <Compile Include="Model\StudentDAL.cs" />
+    <Compile Include="Supporting Files\DBUltiity.cs" />
+    <Compile Include="UI\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChangeRoomRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChangeRoomRequestForm.Designer.cs">
+      <DependentUpon>ChangeRoomRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChangeRoomRequestHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChangeRoomRequestHistory.Designer.cs">
+      <DependentUpon>ChangeRoomRequestHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ComplainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ComplainForm.Designer.cs">
+      <DependentUpon>ComplainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ComplainHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ComplainHistory.Designer.cs">
+      <DependentUpon>ComplainHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LeaveRoomRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LeaveRoomRequestForm.Designer.cs">
+      <DependentUpon>LeaveRoomRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LeaveRoomRequestHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LeaveRoomRequestHistory.Designer.cs">
+      <DependentUpon>LeaveRoomRequestHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\ManagementForm.Designer.cs">
       <DependentUpon>ManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RoomExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RoomExtra.Designer.cs">
+      <DependentUpon>RoomExtra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RoomStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RoomStatus.Designer.cs">
+      <DependentUpon>RoomStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SearchRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SearchRoom.Designer.cs">
+      <DependentUpon>SearchRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SignInForm.cs">
       <SubType>Form</SubType>
@@ -57,8 +150,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChangeRoomRequestForm.resx">
+      <DependentUpon>ChangeRoomRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChangeRoomRequestHistory.resx">
+      <DependentUpon>ChangeRoomRequestHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ComplainForm.resx">
+      <DependentUpon>ComplainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ComplainHistory.resx">
+      <DependentUpon>ComplainHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LeaveRoomRequestForm.resx">
+      <DependentUpon>LeaveRoomRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LeaveRoomRequestHistory.resx">
+      <DependentUpon>LeaveRoomRequestHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ManagementForm.resx">
       <DependentUpon>ManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RoomExtra.resx">
+      <DependentUpon>RoomExtra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RoomStatus.resx">
+      <DependentUpon>RoomStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SearchRoom.resx">
+      <DependentUpon>SearchRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SignInForm.resx">
       <DependentUpon>SignInForm.cs</DependentUpon>
@@ -72,6 +195,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,6 +206,15 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\newestDB.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

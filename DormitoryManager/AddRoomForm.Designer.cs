@@ -39,11 +39,11 @@
             this.txtNoS = new System.Windows.Forms.TextBox();
             this.txtFee = new System.Windows.Forms.TextBox();
             this.txtDom = new System.Windows.Forms.TextBox();
-            this.txtRoomId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtRoomId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblNoS
@@ -137,13 +137,6 @@
             this.txtDom.Size = new System.Drawing.Size(100, 20);
             this.txtDom.TabIndex = 21;
             // 
-            // txtRoomId
-            // 
-            this.txtRoomId.Location = new System.Drawing.Point(181, 109);
-            this.txtRoomId.Name = "txtRoomId";
-            this.txtRoomId.Size = new System.Drawing.Size(100, 20);
-            this.txtRoomId.TabIndex = 20;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -179,6 +172,13 @@
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 16;
             this.label1.Text = "Room ID:";
+            // 
+            // txtRoomId
+            // 
+            this.txtRoomId.Location = new System.Drawing.Point(181, 109);
+            this.txtRoomId.Name = "txtRoomId";
+            this.txtRoomId.Size = new System.Drawing.Size(100, 20);
+            this.txtRoomId.TabIndex = 20;
             // 
             // AddRoomForm
             // 
@@ -221,10 +221,10 @@
         private System.Windows.Forms.TextBox txtNoS;
         private System.Windows.Forms.TextBox txtFee;
         private System.Windows.Forms.TextBox txtDom;
-        private System.Windows.Forms.TextBox txtRoomId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtRoomId;
     }
 }

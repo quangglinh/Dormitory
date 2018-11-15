@@ -15,7 +15,7 @@ namespace DormintoryStudentApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(mainForm: new ManagementForm());
+            Application.Run(mainForm: new SignInForm());
         }
     }
 }
