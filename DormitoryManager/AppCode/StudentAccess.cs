@@ -84,7 +84,7 @@ namespace DormitoryManager.AppCode {
             }
         }
 
-        
+
 
         public int Checkin(string studentId, string roomID, int slot) {
             try {
@@ -103,7 +103,7 @@ namespace DormitoryManager.AppCode {
         }
 
         public Student GetStudent(string Id) {
-            
+
             Student result = new Student();
             try {
                 DataTable dt = new DataTable();
@@ -126,5 +126,84 @@ namespace DormitoryManager.AppCode {
             }
             return result;
         }
+
+        public static List<int> GenerateYear() {
+            List<int> result = new List<int>();
+            int currentYear = DateTime.Now.Year;
+            for (int year = currentYear; year >= currentYear - 7; year--) result.Add(year);
+            return result;
+        }
+
+        public int CreateIfNotExist(string studentID, int month, int year) {
+            try {
+                using (SqlConnection conn = DBUtil.getConnection) {
+                    string query = "if (select COUNT(*) from StudentStatus where studentID = @studentID and [month] = @month and [year] = @year) = 0 "
+                    + "insert into StudentStatus(studentID, [month], [year], electricCost, waterCost, extraFee) "
+                    + "values(@studentID, @month, @year, 0, 0, 0)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@month", month);
+                    cmd.Parameters.AddWithValue("@year", year);
+                    cmd.Parameters.AddWithValue("@studentID", studentID);
+                    conn.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            } catch (Exception ex) {
+                return 0;
+            }
+        }
+
+        public int UpdateStudentStatus(StudentStatus studentStatus) {
+            try {
+                string query = "update StudentStatus set electricCost = @electric, waterCost = @water, extraFee = @extra, extraFeeContent = @info where studentID = @studentID and[month] = @month and[year] = @year";
+                using (SqlConnection conn = DBUtil.getConnection) {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@electric", studentStatus.ElectricCost);
+                    cmd.Parameters.AddWithValue("@water", studentStatus.WaterCost);
+                    cmd.Parameters.AddWithValue("@extra", studentStatus.ExtraFee);
+                    cmd.Parameters.AddWithValue("@info", studentStatus.Desc);
+                    cmd.Parameters.AddWithValue("@studentID", studentStatus.StudentID);
+                    cmd.Parameters.AddWithValue("@month", studentStatus.Month);
+                    cmd.Parameters.AddWithValue("@year", studentStatus.Year);
+                    conn.Open();
+                    return cmd.ExecuteNonQuery();
+
+                }
+            } catch (Exception e) {
+                return 0;
+            }
+        }
+
+       
+
+
+        public StudentStatus GetStudentStatus(string studentID, int month, int year) {
+            StudentStatus studentStatus = new StudentStatus();
+            try {
+                CreateIfNotExist(studentID, month, year);
+                DataTable dt = new DataTable();
+                using (SqlConnection conn = DBUtil.getConnection) {
+                    string query = "select * from StudentStatus where studentID = @studentID and month = @month and year = @year";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@studentID", studentID);
+                    cmd.Parameters.AddWithValue("@month", month);
+                    cmd.Parameters.AddWithValue("@year", year);
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    studentStatus.StudentID = studentID;
+                    studentStatus.Month = month;
+                    studentStatus.Year = year;
+                    studentStatus.ElectricCost = double.Parse(dt.Rows[0][3].ToString());
+                    studentStatus.WaterCost = double.Parse(dt.Rows[0][4].ToString());
+                    studentStatus.ExtraFee = double.Parse(dt.Rows[0][5].ToString());
+                    studentStatus.Desc = dt.Rows[0][6].ToString();
+                    return studentStatus;
+                }
+            } catch (Exception ex) {
+                return null;
+            }
+        }
+
+
     }
 }

@@ -5,6 +5,17 @@ using System.Text;
 
 namespace DormitoryManager.AppCode {
 
+    class StudentStatus {
+        public string StudentID { get; set; }
+        public int Month { get; set; }
+        public int Year { get; set; }
+        public double ElectricCost { get; set; }
+        public double WaterCost { get; set; }
+        public double ExtraFee { get; set; }
+        public string Desc { get; set; }
+
+    }
+
     class Student {
         public string Id { get; set; }
         public string Name { get; set; }
