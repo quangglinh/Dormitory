@@ -158,17 +158,35 @@ namespace DormitoryManager.AppCode
             }
         }
 
-        //Update request
+        //Update request 9 change room) (UpdateRequest)
         public void UpdateRequest(int requestId, int statusId, string type)
         {
             using (SqlConnection connection = DBUtil.getConnection)
             {
                 // add new room
-                SqlCommand cmd = new SqlCommand("Update @type set statusID = @statusId " +
+                SqlCommand cmd = new SqlCommand("Update ChangeRoomRequest set statusID = @statusId " +
                     "where requestID = @requestId", connection);
+                //cmd.Parameters.AddWithValue("@type", type);
                 cmd.Parameters.AddWithValue("@statusId", statusId);
                 cmd.Parameters.AddWithValue("@requestId", requestId);
-                cmd.Parameters.AddWithValue("@type", type);
+                
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+        // update leave room request
+        public void UpdateLeaveRoomRequest(int requestId, int statusId, string type)
+        {
+            using (SqlConnection connection = DBUtil.getConnection)
+            {
+                // add new room
+                SqlCommand cmd = new SqlCommand("Update LeaveRoomRequest set statusID = @statusId " +
+                    "where requestID = @requestId", connection);
+               // cmd.Parameters.AddWithValue("@type", type);
+                cmd.Parameters.AddWithValue("@statusId", statusId);
+                cmd.Parameters.AddWithValue("@requestId", requestId);
+
                 connection.Open();
                 cmd.ExecuteNonQuery();
                 connection.Close();

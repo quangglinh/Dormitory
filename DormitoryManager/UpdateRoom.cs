@@ -55,7 +55,7 @@ namespace DormitoryManager
             {
                 fee = float.Parse(txtFee.Text);
             }
-            catch (Exception ex)
+            catch 
             {
                 MessageBox.Show("Fee must bee float nummber");
                 return false;

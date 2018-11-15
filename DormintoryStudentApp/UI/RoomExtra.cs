@@ -44,6 +44,7 @@ namespace DormintoryStudentApp.UI
             }
             catch (Exception ex)
             {
+                throw ex;
             }
             DataTable months = dao.getMonthByStudentExtra(this.student.studentID, year);
             DataView dv = new DataView(months);
@@ -61,7 +62,7 @@ namespace DormintoryStudentApp.UI
                 int.TryParse(cbbYear.SelectedValue.ToString(), out year);
                 int.TryParse(cbbMonth.SelectedValue.ToString(), out month);
             }
-            catch (Exception ex)
+            catch 
             {
             }
             if (year > 0 && month > 0)
@@ -71,10 +72,21 @@ namespace DormintoryStudentApp.UI
                 string waterCost = row["waterCost"].ToString();
                 string extraFee = row["extraFee"].ToString();
                 string extraFeeContent = row["extraFeeContent"].ToString();
+                bool isComplete =  bool.Parse(row["isCompleteFee"].ToString());
+                string note = row["note"].ToString();
                 txtElectricCost.Text = electricCost;
                 txtExtraContent.Text = extraFeeContent;
                 txtWaterCost.Text = waterCost;
                 txtExtraFee.Text = extraFee;
+                if(!isComplete)
+                {
+                    completeFeeLabel.ForeColor = Color.Red;
+                    completeFeeLabel.Text = "Chưa hoàn thành: " + note;
+                } else
+                {
+                    completeFeeLabel.ForeColor = Color.Green;
+                    completeFeeLabel.Text = "Đã hoàn thành";
+                }
             }
         }
         private void label1_Click(object sender, EventArgs e)

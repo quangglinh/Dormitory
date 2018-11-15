@@ -94,7 +94,7 @@ namespace DormitoryManager {
         int Valid(TextBox txt, Label lb) {
             try {
                 double.Parse(txt.Text);
-            } catch (Exception ex) {
+            } catch  {
                 lb.ForeColor = Color.Red;
                 return 0;
             }
@@ -137,7 +137,7 @@ namespace DormitoryManager {
                     MessageBox.Show("Update Failed");
                 }
                 LoadStatus();
-            } catch (Exception ex) {
+            } catch  {
                 MessageBox.Show("Update Failed");
             }
 

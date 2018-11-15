@@ -66,20 +66,20 @@ namespace DormitoryManager
 
         private void btnApprove_Click(object sender, EventArgs e)
         {
-            new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 3, "LeaveRoomRequest");
+            new DataAccess().UpdateLeaveRoomRequest(int.Parse(cbRequests.SelectedValue.ToString()), 3, "LeaveRoomRequest");
             MessageBox.Show("Update successful!");
 
         }
 
         private void btnReject_Click(object sender, EventArgs e)
         {
-            new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 4, "LeaveRoomRequest");
+            new DataAccess().UpdateLeaveRoomRequest(int.Parse(cbRequests.SelectedValue.ToString()), 4, "LeaveRoomRequest");
             MessageBox.Show("Update successful!");
         }
 
         private void btnQueue_Click(object sender, EventArgs e)
         {
-            new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 2, "LeaveRoomRequest");
+            new DataAccess().UpdateLeaveRoomRequest(int.Parse(cbRequests.SelectedValue.ToString()), 2, "LeaveRoomRequest");
             MessageBox.Show("Update successful!");
         }
 
@@ -93,6 +93,21 @@ namespace DormitoryManager
             var tmp = new StudentCheckout();
             tmp.Show();
             tmp.Import(txtId.Text, new AppCode.Slot() { RoomID = txtFromRoom.Text, Number = int.Parse(txtFromSlot.Text) });
+        }
+
+        private void btnQueue_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnApprove_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReject_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

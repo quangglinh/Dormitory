@@ -58,6 +58,7 @@ namespace DormintoryStudentApp.UI
                     } else
                     {
                         // this room is full
+                        searchResultDGV.DataSource = availableRoom;
                         messageLabel.Text =  "Room " + input + " is full now";
                         return;
                     }

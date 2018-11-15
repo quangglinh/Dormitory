@@ -66,6 +66,7 @@
             this.confirmPassField.Name = "confirmPassField";
             this.confirmPassField.Size = new System.Drawing.Size(168, 20);
             this.confirmPassField.TabIndex = 6;
+            this.confirmPassField.UseSystemPasswordChar = true;
             // 
             // newPassField
             // 
@@ -73,6 +74,7 @@
             this.newPassField.Name = "newPassField";
             this.newPassField.Size = new System.Drawing.Size(168, 20);
             this.newPassField.TabIndex = 7;
+            this.newPassField.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -117,6 +119,7 @@
             this.currentPassField.Name = "currentPassField";
             this.currentPassField.Size = new System.Drawing.Size(168, 20);
             this.currentPassField.TabIndex = 5;
+            this.currentPassField.UseSystemPasswordChar = true;
             // 
             // label1
             // 

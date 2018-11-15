@@ -48,9 +48,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(187, 129);
+            this.label1.Location = new System.Drawing.Point(140, 105);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(396, 39);
+            this.label1.Size = new System.Drawing.Size(318, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "FPT Dormitory \'s Student";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,9 +61,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 39);
+            this.label2.Location = new System.Drawing.Point(30, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 24);
+            this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Username";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -70,10 +72,10 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(163, 39);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Location = new System.Drawing.Point(122, 32);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(343, 28);
+            this.txtUsername.Size = new System.Drawing.Size(258, 24);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "student1";
             // 
@@ -85,19 +87,19 @@
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(125, 210);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(94, 171);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(545, 212);
+            this.panel1.Size = new System.Drawing.Size(409, 173);
             this.panel1.TabIndex = 4;
             // 
             // btnSignIn
             // 
             this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.Location = new System.Drawing.Point(199, 155);
-            this.btnSignIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSignIn.Location = new System.Drawing.Point(149, 126);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(144, 39);
+            this.btnSignIn.Size = new System.Drawing.Size(108, 32);
             this.btnSignIn.TabIndex = 3;
             this.btnSignIn.Text = "Sign In";
             this.btnSignIn.UseVisualStyleBackColor = true;
@@ -106,29 +108,31 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(163, 106);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Location = new System.Drawing.Point(122, 86);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(343, 28);
+            this.txtPassword.Size = new System.Drawing.Size(258, 24);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "123456";
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 106);
+            this.label3.Location = new System.Drawing.Point(30, 86);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 24);
+            this.label3.Size = new System.Drawing.Size(75, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Password";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(204, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(153, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(303, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -141,10 +145,10 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(91, 38);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(68, 31);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(813, 483);
+            this.panel2.Size = new System.Drawing.Size(610, 392);
             this.panel2.TabIndex = 6;
             // 
             // errorMessage
@@ -152,23 +156,22 @@
             this.errorMessage.AutoSize = true;
             this.errorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorMessage.ForeColor = System.Drawing.Color.Red;
-            this.errorMessage.Location = new System.Drawing.Point(286, 436);
-            this.errorMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.errorMessage.Location = new System.Drawing.Point(214, 354);
             this.errorMessage.Name = "errorMessage";
-            this.errorMessage.Size = new System.Drawing.Size(69, 18);
+            this.errorMessage.Size = new System.Drawing.Size(58, 15);
             this.errorMessage.TabIndex = 7;
             this.errorMessage.Text = "message";
             this.errorMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SignInForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(952, 566);
+            this.ClientSize = new System.Drawing.Size(714, 460);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SignInForm";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignInForm_FormClosing);

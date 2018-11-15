@@ -102,7 +102,7 @@
             this.searchResultDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.searchResultDGV.Location = new System.Drawing.Point(16, 145);
             this.searchResultDGV.Name = "searchResultDGV";
-            this.searchResultDGV.Size = new System.Drawing.Size(525, 237);
+            this.searchResultDGV.Size = new System.Drawing.Size(670, 237);
             this.searchResultDGV.TabIndex = 6;
             this.searchResultDGV.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.searchResultDGV_DataBindingComplete);
             // 
@@ -135,10 +135,11 @@
             // messageLabel
             // 
             this.messageLabel.AutoSize = true;
+            this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.messageLabel.Location = new System.Drawing.Point(230, 115);
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(49, 13);
+            this.messageLabel.Size = new System.Drawing.Size(56, 13);
             this.messageLabel.TabIndex = 10;
             this.messageLabel.Text = "message";
             // 
@@ -156,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 394);
+            this.ClientSize = new System.Drawing.Size(698, 394);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.messageLabel);
             this.Controls.Add(this.searchByNameButton);

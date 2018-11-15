@@ -44,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.messageLabel = new System.Windows.Forms.Label();
+            this.message = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // sendButton
@@ -181,11 +182,22 @@
             this.messageLabel.Size = new System.Drawing.Size(0, 13);
             this.messageLabel.TabIndex = 26;
             // 
+            // message
+            // 
+            this.message.AutoSize = true;
+            this.message.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.message.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.message.Location = new System.Drawing.Point(264, 194);
+            this.message.Name = "message";
+            this.message.Size = new System.Drawing.Size(0, 13);
+            this.message.TabIndex = 27;
+            // 
             // ChangeRoomRequestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 564);
+            this.Controls.Add(this.message);
             this.Controls.Add(this.messageLabel);
             this.Controls.Add(this.toRoomField);
             this.Controls.Add(this.toSlotField);
@@ -228,5 +240,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label messageLabel;
+        private System.Windows.Forms.Label message;
     }
 }

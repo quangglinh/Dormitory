@@ -65,21 +65,33 @@ namespace DormintoryStudentApp.UI
             {
                 MessageBox.Show("Slot have to be an integer!", "Inform", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
-            } else
+            } else if (!(new RoomDAL().isRoomExisted(toRoom))) {
+                MessageBox.Show("This room is not existed", "Inform", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            } else 
             {
-                // insert
-                bool successInsert = new RequestDAL().addChangeRoomRequest(theStudent.studentID, slotField.Text, roomField.Text, contentField.Text, toSlotField.Text, toRoomField.Text, "1");
-                if (successInsert)
+                DataTable availableRoom = new RoomDAL().getAvailableRoomByInput(toRoom);
+                if ( !(availableRoom.Rows.Count > 0))
                 {
-                    MessageBox.Show("Request has sent!", "Inform", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    message.Text = "Room " + toRoom + " is full";
                     return;
                 }
                 else
                 {
-                    MessageBox.Show("Send fail", "Inform", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
+                    // insert
+                    bool successInsert = new RequestDAL().addChangeRoomRequest(theStudent.studentID, slotField.Text, roomField.Text, contentField.Text, toSlotField.Text, toRoomField.Text, "1");
+                    if (successInsert)
+                    {
+                        MessageBox.Show("Request has sent!", "Inform", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Send fail", "Inform", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
                 }
-            }
+            } 
             
         }
     }

@@ -59,6 +59,7 @@
             this.btnQueue.TabIndex = 28;
             this.btnQueue.Text = "Queue";
             this.btnQueue.UseVisualStyleBackColor = true;
+            this.btnQueue.Click += new System.EventHandler(this.btnQueue_Click_1);
             // 
             // btnReject
             // 
@@ -68,6 +69,7 @@
             this.btnReject.TabIndex = 27;
             this.btnReject.Text = "Reject";
             this.btnReject.UseVisualStyleBackColor = true;
+            this.btnReject.Click += new System.EventHandler(this.btnReject_Click_1);
             // 
             // btnApprove
             // 
@@ -77,6 +79,7 @@
             this.btnApprove.TabIndex = 26;
             this.btnApprove.Text = "Approve";
             this.btnApprove.UseVisualStyleBackColor = true;
+            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click_1);
             // 
             // txtStatus
             // 

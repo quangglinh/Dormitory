@@ -92,7 +92,7 @@ namespace DormintoryStudentApp.Model
                 int slotNumber = 0;
                 try {
                     int.TryParse(row["slotNumber"].ToString(), out slotNumber);
-                } catch (Exception ex)
+                } catch
                 {
 
                 }
