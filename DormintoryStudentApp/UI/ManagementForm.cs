@@ -83,7 +83,7 @@ namespace DormintoryStudentApp.UI
 
         private void btnRoomExtra_Click(object sender, EventArgs e)
         {
-            RoomExtra roomExtraForm = new RoomExtra(theStudent.studentID);
+            RoomExtra roomExtraForm = new RoomExtra(theStudent);
             roomExtraForm.ShowDialog();
         }
 

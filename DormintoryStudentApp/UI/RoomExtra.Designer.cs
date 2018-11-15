@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.studentInfoLabel = new System.Windows.Forms.Label();
+            this.lblStudentInfo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbbMonth = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,18 +44,18 @@
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // studentInfoLabel
+            // lblStudentInfo
             // 
-            this.studentInfoLabel.AutoSize = true;
-            this.studentInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentInfoLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.studentInfoLabel.Location = new System.Drawing.Point(35, 26);
-            this.studentInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.studentInfoLabel.Name = "studentInfoLabel";
-            this.studentInfoLabel.Size = new System.Drawing.Size(286, 29);
-            this.studentInfoLabel.TabIndex = 0;
-            this.studentInfoLabel.Text = "NguyenLam, SE06118";
-            this.studentInfoLabel.Click += new System.EventHandler(this.label1_Click);
+            this.lblStudentInfo.AutoSize = true;
+            this.lblStudentInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentInfo.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblStudentInfo.Location = new System.Drawing.Point(35, 26);
+            this.lblStudentInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStudentInfo.Name = "lblStudentInfo";
+            this.lblStudentInfo.Size = new System.Drawing.Size(286, 29);
+            this.lblStudentInfo.TabIndex = 0;
+            this.lblStudentInfo.Text = "NguyenLam, SE06118";
+            this.lblStudentInfo.Click += new System.EventHandler(this.label1_Click);
             // 
             // label1
             // 
@@ -177,9 +177,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(207, 484);
+            this.button1.Location = new System.Drawing.Point(207, 469);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 36);
+            this.button1.Size = new System.Drawing.Size(188, 51);
             this.button1.TabIndex = 6;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             this.Controls.Add(this.cbbMonth);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.studentInfoLabel);
+            this.Controls.Add(this.lblStudentInfo);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RoomExtra";
             this.Text = "RoomExtra";
@@ -215,7 +215,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label studentInfoLabel;
+        private System.Windows.Forms.Label lblStudentInfo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbbMonth;
         private System.Windows.Forms.Label label2;

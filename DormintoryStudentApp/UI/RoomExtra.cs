@@ -13,17 +13,22 @@ namespace DormintoryStudentApp.UI
 {
     public partial class RoomExtra : Form
     {
-        string studentID;
+        Student student;
         StudentDAL dao;
-        public RoomExtra(string StudentID)
+        public RoomExtra(Student Student)
         {
             InitializeComponent();
             dao = new StudentDAL();
-            this.studentID = StudentID;
+            this.student = Student;
+        }
+        public void setName()
+        {
+            string title = $"Student: {this.student.name} - {this.student.studentID.ToUpper()}";
+            lblStudentInfo.Text = title;
         }
         public void setYearDropDown()
         {
-            DataTable years = dao.getYearByStudentExtra(this.studentID);
+            DataTable years = dao.getYearByStudentExtra(this.student.studentID);
             DataView dv = new DataView(years);
             dv.Sort = "year DESC";
             cbbYear.DataSource = dv;
@@ -40,7 +45,7 @@ namespace DormintoryStudentApp.UI
             catch (Exception ex)
             {
             }
-            DataTable months = dao.getMonthByStudentExtra(this.studentID, year);
+            DataTable months = dao.getMonthByStudentExtra(this.student.studentID, year);
             DataView dv = new DataView(months);
             dv.Sort = "month DESC";
             cbbMonth.DataSource = dv;
@@ -61,7 +66,7 @@ namespace DormintoryStudentApp.UI
             }
             if (year > 0 && month > 0)
             {
-                DataRow row = dao.getBillhByStudentExtra(this.studentID, year, month);
+                DataRow row = dao.getBillhByStudentExtra(this.student.studentID, year, month);
                 string electricCost = row["electricCost"].ToString();
                 string waterCost = row["waterCost"].ToString();
                 string extraFee = row["extraFee"].ToString();
@@ -84,6 +89,7 @@ namespace DormintoryStudentApp.UI
 
         private void RoomExtra_Load(object sender, EventArgs e)
         {
+            setName();
             setYearDropDown();
             setMonthDropDown();
             setDataForTextField();

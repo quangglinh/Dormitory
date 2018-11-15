@@ -36,7 +36,6 @@
             this.txtDom = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSlotNumber = new System.Windows.Forms.TextBox();
-            this.btnRequest = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtRoom = new System.Windows.Forms.TextBox();
@@ -118,19 +117,6 @@
             this.txtSlotNumber.Size = new System.Drawing.Size(162, 26);
             this.txtSlotNumber.TabIndex = 1;
             // 
-            // btnRequest
-            // 
-            this.btnRequest.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRequest.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRequest.Location = new System.Drawing.Point(212, 320);
-            this.btnRequest.Name = "btnRequest";
-            this.btnRequest.Size = new System.Drawing.Size(150, 62);
-            this.btnRequest.TabIndex = 2;
-            this.btnRequest.Text = "Request";
-            this.btnRequest.UseVisualStyleBackColor = false;
-            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
-            // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,7 +153,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 407);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnRequest);
             this.Controls.Add(this.txtRoom);
             this.Controls.Add(this.txtSlotNumber);
             this.Controls.Add(this.txtDom);
@@ -199,7 +184,6 @@
         private System.Windows.Forms.TextBox txtDom;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtSlotNumber;
-        private System.Windows.Forms.Button btnRequest;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRoom;
