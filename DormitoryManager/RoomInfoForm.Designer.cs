@@ -43,7 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblSearchError = new System.Windows.Forms.Label();
             this.cbRooms = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.lblAvailable = new System.Windows.Forms.Label();
             this.txtAvailable = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -173,16 +172,7 @@
             this.cbRooms.Name = "cbRooms";
             this.cbRooms.Size = new System.Drawing.Size(121, 21);
             this.cbRooms.TabIndex = 48;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(276, 99);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 49;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
+            this.cbRooms.SelectedIndexChanged += new System.EventHandler(this.cbRooms_SelectedIndexChanged);
             // 
             // lblAvailable
             // 
@@ -207,7 +197,6 @@
             this.ClientSize = new System.Drawing.Size(363, 450);
             this.Controls.Add(this.txtAvailable);
             this.Controls.Add(this.lblAvailable);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cbRooms);
             this.Controls.Add(this.lblSearchError);
             this.Controls.Add(this.label5);
@@ -247,7 +236,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblSearchError;
         private System.Windows.Forms.ComboBox cbRooms;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblAvailable;
         private System.Windows.Forms.TextBox txtAvailable;
     }
