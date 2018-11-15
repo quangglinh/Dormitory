@@ -23,7 +23,7 @@ namespace DormitoryManager
 
         private void UpdateRoom_Click(object sender, EventArgs e)
         {
-
+            new UpdateRoom().Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

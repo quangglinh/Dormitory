@@ -16,6 +16,7 @@ namespace DormitoryManager
         {
             InitializeComponent();
             LoadRoom();
+            LoadRoomInformation();
         }
         private void LoadRoom()
         {
@@ -24,7 +25,7 @@ namespace DormitoryManager
             cbRooms.DisplayMember = "roomID";
         }
 
-        private void btnSearch_Click_1(object sender, EventArgs e)
+        private void LoadRoomInformation()
         {
             DataTable dt = new DataAccess().LoadRoomInfo(cbRooms.SelectedValue.ToString());
             DataTable available = new DataAccess().LoadAvailableSlots(cbRooms.SelectedValue.ToString());
@@ -34,7 +35,7 @@ namespace DormitoryManager
             if (available.Rows.Count > 0)
             {
                 txtAvailable.Text = "";
-                
+
                 for (int i = 0; i < available.Rows.Count; i++)
                 {
                     txtAvailable.Text += " " + available.Rows[i][0].ToString();
@@ -44,6 +45,10 @@ namespace DormitoryManager
             {
                 txtAvailable.Text = "0";
             }
+        }
+        private void cbRooms_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadRoomInformation();
         }
     }
 }

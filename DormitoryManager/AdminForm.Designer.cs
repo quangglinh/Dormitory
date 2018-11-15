@@ -85,7 +85,7 @@
             this.UpdateRoom.Name = "UpdateRoom";
             this.UpdateRoom.Size = new System.Drawing.Size(298, 23);
             this.UpdateRoom.TabIndex = 2;
-            this.UpdateRoom.Text = "Update a Room";
+            this.UpdateRoom.Text = "Update Room\'s Fee";
             this.UpdateRoom.UseVisualStyleBackColor = true;
             this.UpdateRoom.Click += new System.EventHandler(this.UpdateRoom_Click);
             // 

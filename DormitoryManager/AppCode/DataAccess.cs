@@ -88,7 +88,7 @@ namespace DormitoryManager.AppCode
             using (SqlConnection connection = DBUtil.getConnection)
             {
                 DataTable dt = new DataTable();
-                string query = "select statusID from ChangeRoomRequest";
+                string query = "select requestID from ChangeRoomRequest";
                 SqlDataAdapter da = new SqlDataAdapter(query, connection);
                 da.Fill(dt);
                 return dt;
@@ -96,17 +96,49 @@ namespace DormitoryManager.AppCode
         }
 
         //Load student request info
-        public DataTable LoadStudentRequestInfo(string statusId)
+        public DataTable LoadStudentRequestInfo(string requestID)
         {
             using (SqlConnection connection = DBUtil.getConnection)
             {
                 DataTable dt = new DataTable();
-                string query = "select s.studentID,s.name,c.fromSlot,c.atRoom,c.toSlot,c.toRoom,c.reason,w.[status],w.statusID from " +
+                string query = "select c.requestID,s.studentID,s.name,c.fromSlot,c.atRoom,c.toSlot,c.toRoom,c.reason,w.[status],w.statusID from " +
                     "Student s inner join ChangeRoomRequest c on s.studentID = c.studentID " +
-                    "inner join WorkStatus w on c.statusID = w.statusID where w.statusID=" + statusId;
+                    "inner join WorkStatus w on c.statusID = w.statusID where c.requestID=" + requestID;
                 SqlDataAdapter da = new SqlDataAdapter(query,connection);
                 da.Fill(dt);
                 return dt;
+            }
+        }
+
+        //Update request
+        public void UpdateRequest(int requestId, int statusId)
+        {
+            using (SqlConnection connection = DBUtil.getConnection)
+            {
+                // add new room
+                SqlCommand cmd = new SqlCommand("Update ChangeRoomRequest set statusID = @statusId " +
+                    "where requestID = @requestId", connection);
+                cmd.Parameters.AddWithValue("@statusId", statusId);
+                cmd.Parameters.AddWithValue("@requestId", requestId);
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        //Update request
+        public void UpdateFee(string roomId, float fee)
+        {
+            using (SqlConnection connection = DBUtil.getConnection)
+            {
+                // add new room
+                SqlCommand cmd = new SqlCommand("Update Room set monthlyFee = @fee " +
+                    "where roomID = @roomID", connection);
+                cmd.Parameters.AddWithValue("@fee", fee);
+                cmd.Parameters.AddWithValue("@roomID", roomId);
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
             }
         }
     }

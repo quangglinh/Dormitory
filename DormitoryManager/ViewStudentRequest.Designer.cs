@@ -31,24 +31,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtFromRoom = new System.Windows.Forms.TextBox();
+            this.txtFromSlot = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtReason = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtFromSlot = new System.Windows.Forms.TextBox();
-            this.txtFromRoom = new System.Windows.Forms.TextBox();
             this.txtToRoom = new System.Windows.Forms.TextBox();
             this.txtToSlot = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtReason = new System.Windows.Forms.RichTextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.cbRequests = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.btnApprove = new System.Windows.Forms.Button();
+            this.btnReject = new System.Windows.Forms.Button();
+            this.btnQueue = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -85,15 +87,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "From";
             // 
-            // btnSearch
+            // txtFromRoom
             // 
-            this.btnSearch.Location = new System.Drawing.Point(238, 33);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.txtFromRoom.Location = new System.Drawing.Point(48, 69);
+            this.txtFromRoom.Name = "txtFromRoom";
+            this.txtFromRoom.ReadOnly = true;
+            this.txtFromRoom.Size = new System.Drawing.Size(126, 20);
+            this.txtFromRoom.TabIndex = 3;
+            // 
+            // txtFromSlot
+            // 
+            this.txtFromSlot.Location = new System.Drawing.Point(48, 17);
+            this.txtFromSlot.Name = "txtFromSlot";
+            this.txtFromSlot.ReadOnly = true;
+            this.txtFromSlot.Size = new System.Drawing.Size(126, 20);
+            this.txtFromSlot.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Room";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(25, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Slot";
             // 
             // txtName
             // 
@@ -115,59 +141,6 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "To";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.txtReason);
-            this.groupBox3.Location = new System.Drawing.Point(312, 152);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(243, 281);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Reason";
-            // 
-            // txtReason
-            // 
-            this.txtReason.Location = new System.Drawing.Point(7, 20);
-            this.txtReason.Name = "txtReason";
-            this.txtReason.ReadOnly = true;
-            this.txtReason.Size = new System.Drawing.Size(228, 255);
-            this.txtReason.TabIndex = 0;
-            this.txtReason.Text = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Slot";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Room";
-            // 
-            // txtFromSlot
-            // 
-            this.txtFromSlot.Location = new System.Drawing.Point(48, 17);
-            this.txtFromSlot.Name = "txtFromSlot";
-            this.txtFromSlot.ReadOnly = true;
-            this.txtFromSlot.Size = new System.Drawing.Size(126, 20);
-            this.txtFromSlot.TabIndex = 2;
-            // 
-            // txtFromRoom
-            // 
-            this.txtFromRoom.Location = new System.Drawing.Point(48, 69);
-            this.txtFromRoom.Name = "txtFromRoom";
-            this.txtFromRoom.ReadOnly = true;
-            this.txtFromRoom.Size = new System.Drawing.Size(126, 20);
-            this.txtFromRoom.TabIndex = 3;
             // 
             // txtToRoom
             // 
@@ -203,6 +176,25 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Slot";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtReason);
+            this.groupBox3.Location = new System.Drawing.Point(312, 152);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(243, 281);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Reason";
+            // 
+            // txtReason
+            // 
+            this.txtReason.Location = new System.Drawing.Point(7, 20);
+            this.txtReason.Name = "txtReason";
+            this.txtReason.ReadOnly = true;
+            this.txtReason.Size = new System.Drawing.Size(228, 255);
+            this.txtReason.TabIndex = 0;
+            this.txtReason.Text = "";
+            // 
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(107, 81);
@@ -218,6 +210,7 @@
             this.cbRequests.Name = "cbRequests";
             this.cbRequests.Size = new System.Drawing.Size(111, 21);
             this.cbRequests.TabIndex = 8;
+            this.cbRequests.SelectedIndexChanged += new System.EventHandler(this.cbRequests_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -245,11 +238,44 @@
             this.txtStatus.Size = new System.Drawing.Size(100, 20);
             this.txtStatus.TabIndex = 11;
             // 
+            // btnApprove
+            // 
+            this.btnApprove.Location = new System.Drawing.Point(322, 33);
+            this.btnApprove.Name = "btnApprove";
+            this.btnApprove.Size = new System.Drawing.Size(75, 23);
+            this.btnApprove.TabIndex = 12;
+            this.btnApprove.Text = "Approve";
+            this.btnApprove.UseVisualStyleBackColor = true;
+            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
+            // 
+            // btnReject
+            // 
+            this.btnReject.Location = new System.Drawing.Point(469, 32);
+            this.btnReject.Name = "btnReject";
+            this.btnReject.Size = new System.Drawing.Size(75, 23);
+            this.btnReject.TabIndex = 13;
+            this.btnReject.Text = "Reject";
+            this.btnReject.UseVisualStyleBackColor = true;
+            this.btnReject.Click += new System.EventHandler(this.btnReject_Click);
+            // 
+            // btnQueue
+            // 
+            this.btnQueue.Location = new System.Drawing.Point(469, 107);
+            this.btnQueue.Name = "btnQueue";
+            this.btnQueue.Size = new System.Drawing.Size(75, 23);
+            this.btnQueue.TabIndex = 14;
+            this.btnQueue.Text = "Queue";
+            this.btnQueue.UseVisualStyleBackColor = true;
+            this.btnQueue.Click += new System.EventHandler(this.btnQueue_Click);
+            // 
             // ViewStudentRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 476);
+            this.Controls.Add(this.btnQueue);
+            this.Controls.Add(this.btnReject);
+            this.Controls.Add(this.btnApprove);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -257,7 +283,6 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
@@ -283,7 +308,6 @@
         private System.Windows.Forms.TextBox txtFromSlot;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtToRoom;
@@ -297,5 +321,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Button btnApprove;
+        private System.Windows.Forms.Button btnReject;
+        private System.Windows.Forms.Button btnQueue;
     }
 }
