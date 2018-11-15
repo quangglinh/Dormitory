@@ -72,6 +72,8 @@
     </Compile>
     <Compile Include="AppCode\DataAccess.cs" />
     <Compile Include="AppCode\DBUtil.cs" />
+    <Compile Include="AppCode\Entity.cs" />
+    <Compile Include="AppCode\StudentAccess.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +93,24 @@
     </Compile>
     <Compile Include="UpdateRoom.Designer.cs">
       <DependentUpon>UpdateRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentCheckout.Designer.cs">
+      <DependentUpon>StudentCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCheckin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentCheckin.Designer.cs">
+      <DependentUpon>StudentCheckin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStudentStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStudentStatus.Designer.cs">
+      <DependentUpon>UpdateStudentStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewStudentRequest.cs">
       <SubType>Form</SubType>
@@ -118,6 +138,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateRoom.resx">
       <DependentUpon>UpdateRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentCheckout.resx">
+      <DependentUpon>StudentCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentCheckin.resx">
+      <DependentUpon>StudentCheckin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStudentStatus.resx">
+      <DependentUpon>UpdateStudentStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewStudentRequest.resx">
       <DependentUpon>ViewStudentRequest.cs</DependentUpon>
