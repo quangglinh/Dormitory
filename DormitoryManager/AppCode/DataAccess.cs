@@ -113,15 +113,17 @@ namespace DormitoryManager.AppCode
         }
 
         //Load student request info
-        public DataTable LoadStudentRequestInfo(string requestID)
+        public DataTable LoadStudentRequestInfo(int requestID)
         {
             using (SqlConnection connection = DBUtil.getConnection)
             {
                 DataTable dt = new DataTable();
                 string query = "select c.requestID,s.studentID,s.name,c.fromSlot,c.atRoom,c.toSlot,c.toRoom,c.reason,w.[status],w.statusID from " +
                     "Student s inner join ChangeRoomRequest c on s.studentID = c.studentID " +
-                    "inner join WorkStatus w on c.statusID = w.statusID where c.requestID= " + requestID;
-                SqlDataAdapter da = new SqlDataAdapter(query,connection);
+                    "inner join WorkStatus w on c.statusID = w.statusID where c.requestID= @requestID";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@requestID", requestID);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 return dt;
             }

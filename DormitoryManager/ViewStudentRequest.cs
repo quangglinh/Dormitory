@@ -31,34 +31,12 @@ namespace DormitoryManager
 
         private void LoadRequestInformation()
         {
-            if (!hasRequests())
-            {
-                MessageBox.Show("There are no requests!");
-                return;
-            }
-            DataTable dt = new DataAccess().LoadStudentRequestInfo(cbRequests.SelectedValue.ToString());
-            txtId.Text = dt.Rows[0]["studentID"].ToString();
-            txtName.Text = dt.Rows[0]["name"].ToString();
-            txtFromSlot.Text = dt.Rows[0]["fromSlot"].ToString();
-            txtFromRoom.Text = dt.Rows[0]["atRoom"].ToString();
-            txtToSlot.Text = dt.Rows[0]["toSlot"].ToString();
-            txtToRoom.Text = dt.Rows[0]["toRoom"].ToString();
-            txtReason.Text = dt.Rows[0]["reason"].ToString();
-            txtStatus.Text = dt.Rows[0]["status"].ToString();
-            btnApprove.Enabled = true;
-            btnReject.Enabled = true;
-            btnQueue.Enabled = true;
-            if (txtStatus.Text == "processing") btnQueue.Enabled = false;
-            if (txtStatus.Text == "done" || txtStatus.Text == "reject")
-            {
-                btnApprove.Enabled = false;
-                btnReject.Enabled = false;
-                btnQueue.Enabled = false;
-            }
+            MessageBox.Show(cbRequests.SelectedValue.ToString());
+
         }
         private void cbRequests_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            LoadRequestInformation();
         }
 
         private void btnApprove_Click(object sender, EventArgs e)
