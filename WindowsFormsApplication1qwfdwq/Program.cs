@@ -1,9 +1,10 @@
-﻿using DormintoryStudentApp.UI;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace DormintoryStudentApp
+
+namespace WindowsFormsApplication1qwfdwq
 {
     static class Program
     {
@@ -15,7 +16,7 @@ namespace DormintoryStudentApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(mainForm: new SignInForm());
+            Application.Run(new Form1());
         }
     }
 }
