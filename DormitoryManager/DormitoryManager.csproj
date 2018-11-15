@@ -89,6 +89,11 @@
     <Compile Include="RoomInfoForm.Designer.cs">
       <DependentUpon>RoomInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeRoom.Designer.cs">
+      <DependentUpon>ChangeRoom.cs</DependentUpon>
     <Compile Include="UpdateRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +145,8 @@
     <EmbeddedResource Include="RoomInfoForm.resx">
       <DependentUpon>RoomInfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeRoom.resx">
+      <DependentUpon>ChangeRoom.cs</DependentUpon>
     <EmbeddedResource Include="UpdateRoom.resx">
       <DependentUpon>UpdateRoom.cs</DependentUpon>
     </EmbeddedResource>
