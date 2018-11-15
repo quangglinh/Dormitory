@@ -47,5 +47,9 @@ namespace DormitoryManager
         private void button4_Click(object sender, EventArgs e) {
             new UpdateStudentStatus().Show();
         }
+
+        private void button5_Click(object sender, EventArgs e) {
+            new ChangeRoom().Show();
+        }
     }
 }

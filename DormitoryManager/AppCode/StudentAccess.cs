@@ -128,7 +128,6 @@ namespace DormitoryManager.AppCode {
             }
             return result;
         }
-
         public static List<int> GenerateYear() {
             List<int> result = new List<int>();
             int currentYear = DateTime.Now.Year;
@@ -154,7 +153,6 @@ namespace DormitoryManager.AppCode {
                 return 0;
             }
         }
-
         public int UpdateStudentStatus(StudentStatus studentStatus) {
             try {
                 string query = "update StudentStatus set electricCost = @electric, waterCost = @water, extraFee = @extra, extraFeeContent = @extraInfo, isCompleteFee = @complete, note = @info where studentID = @studentID and[month] = @month and[year] = @year";
@@ -178,10 +176,6 @@ namespace DormitoryManager.AppCode {
                 return 0;
             }
         }
-
-       
-
-
         public StudentStatus GetStudentStatus(string studentID, int month, int year) {
             StudentStatus studentStatus = new StudentStatus();
             try {

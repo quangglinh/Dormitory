@@ -35,9 +35,10 @@
             this.UpdateRoom = new System.Windows.Forms.Button();
             this.AddRoom = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +112,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
@@ -119,6 +121,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(491, 416);
             this.panel2.TabIndex = 2;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(49, 136);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(397, 23);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Update Student Status";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -140,15 +152,15 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button4
+            // button5
             // 
-            this.button4.Location = new System.Drawing.Point(49, 136);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(397, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Update Student Status";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button5.Location = new System.Drawing.Point(47, 197);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(397, 23);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Change Room";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // AdminForm
             // 
@@ -180,6 +192,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 

@@ -9,21 +9,20 @@ using System.Windows.Forms;
 using DormitoryManager.AppCode;
 
 namespace DormitoryManager {
-    public partial class StudentCheckin : Form {
-        public StudentCheckin() {
+    public partial class ChangeRoom : Form {
+        public ChangeRoom() {
             InitializeComponent();
-        }
-
+        }     
         public void LoadRoomInfo() {
             Slot slot = new StudentAccess().getSlot(txtStudentId.Text);
             if (slot == null) {
-                UIUtil.FillRoom(cbRoom, cbSlot, txtDom, txtFee, txtMaxSlot, null, 0);
+                UIUtil.FillRoom(txtFromRoom, txtFromSlot, txtFromDom, txtFromFee, txtFromMaxSlot, null, 0);
                 return;
             }
             LoadRoom();
             cbSlot.DataSource = null;
             Room now = new StudentAccess().GetRoom(slot.RoomID);
-            UIUtil.FillRoom(cbRoom, cbSlot, txtDom, txtFee, txtMaxSlot, now, slot.Number);
+            UIUtil.FillRoom(txtFromRoom, txtFromSlot, txtFromDom, txtFromFee, txtFromMaxSlot, now, slot.Number);
         }
 
         private void LoadStudents() {
@@ -34,13 +33,12 @@ namespace DormitoryManager {
             if (student == null) return;
             LoadRoom();
             if (new StudentAccess().isStudentAvailable(txtStudentId.Text)) {
-                lbAvailable.Text = "Available";
+                lbAvailable.Text = "Not Checked in yet";
+                lbAvailable.ForeColor = Color.Orange;
+            } else {
+                lbAvailable.Text = "Found";
                 lbAvailable.ForeColor = Color.Green;
                 gbRoom.Enabled = true;
-            } else {
-                lbAvailable.Text = "Already Checked in";
-                lbAvailable.ForeColor = Color.Orange;
-                
             }
         }
         private void StudentCheckin_Load(object sender, EventArgs e) {
@@ -66,11 +64,11 @@ namespace DormitoryManager {
             cbSlot.DataSource = dt;
             cbSlot.ValueMember = "slotNumber";
             cbSlot.DisplayMember = "slotNumber";
-            btnCheckin.Enabled = true;
+            btnChange.Enabled = true;
         }
 
         private void cbRoom_SelectedIndexChanged(object sender, EventArgs e) {
-            btnCheckin.Enabled = false;
+            btnChange.Enabled = false;
             Room now = new StudentAccess().GetRoom(cbRoom.Text);
             UIUtil.FillRoom(cbRoom, cbSlot, txtDom, txtFee, txtMaxSlot, now, -1);
             if (now != null ) {
@@ -78,8 +76,7 @@ namespace DormitoryManager {
                 txtFee.Text = now.Fee.ToString();
                 txtMaxSlot.Text = now.NoSlot.ToString();
                 Slot slot = new StudentAccess().getSlot(txtStudentId.Text);
-                if (slot == null) LoadSlot(cbRoom.Text);
-                else cbSlot.Text = slot.Number.ToString();
+                LoadSlot(cbRoom.Text);
             } else {
                 cbSlot.Text = "Not available";
             }
@@ -88,15 +85,22 @@ namespace DormitoryManager {
             LoadStudents();
         }
 
-        private void btnCheckin_Click(object sender, EventArgs e) {
+       
+
+        private void btnChange_Click(object sender, EventArgs e) {
             string studentID = txtStudentId.Text;
             string roomId = cbRoom.Text;
             int slot = int.Parse(cbSlot.Text);
+            int checkout = new StudentAccess().Checkout(studentID);
+            if (checkout == 0) {
+                MessageBox.Show("Change Room failed");
+                return;
+            }
             int result = new StudentAccess().Checkin(studentID, roomId, slot);
             if (result == 1) {
-                MessageBox.Show("Checkin success");
+                MessageBox.Show("Change Room success");
             } else {
-                MessageBox.Show("Checkin failed");
+                MessageBox.Show("Change Room failed");
             }
             LoadStudents();
             cbRoom.SelectedIndex = 0;

@@ -87,9 +87,9 @@
             // 
             // txtStudentPhone
             // 
-            this.txtStudentPhone.Enabled = false;
             this.txtStudentPhone.Location = new System.Drawing.Point(133, 143);
             this.txtStudentPhone.Name = "txtStudentPhone";
+            this.txtStudentPhone.ReadOnly = true;
             this.txtStudentPhone.Size = new System.Drawing.Size(245, 22);
             this.txtStudentPhone.TabIndex = 7;
             // 
@@ -104,9 +104,9 @@
             // 
             // txtStudentMail
             // 
-            this.txtStudentMail.Enabled = false;
             this.txtStudentMail.Location = new System.Drawing.Point(133, 114);
             this.txtStudentMail.Name = "txtStudentMail";
+            this.txtStudentMail.ReadOnly = true;
             this.txtStudentMail.Size = new System.Drawing.Size(245, 22);
             this.txtStudentMail.TabIndex = 5;
             // 
@@ -121,9 +121,9 @@
             // 
             // txtStudentName
             // 
-            this.txtStudentName.Enabled = false;
             this.txtStudentName.Location = new System.Drawing.Point(133, 84);
             this.txtStudentName.Name = "txtStudentName";
+            this.txtStudentName.ReadOnly = true;
             this.txtStudentName.Size = new System.Drawing.Size(245, 22);
             this.txtStudentName.TabIndex = 3;
             // 
@@ -268,7 +268,7 @@
             this.Controls.Add(this.gbRoom);
             this.Controls.Add(this.groupBox1);
             this.Name = "StudentCheckout";
-            this.Text = "StudentCheckin";
+            this.Text = "Check Out";
             this.Load += new System.EventHandler(this.StudentCheckin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
