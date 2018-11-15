@@ -75,9 +75,10 @@ namespace DormitoryManager.AppCode
             using (SqlConnection connection = DBUtil.getConnection)
             {
                 DataTable dt = new DataTable();
-                string query = "Select * from Room where roomID = '"+roomId+"'";
-                SqlDataAdapter da = new SqlDataAdapter(query, connection);
-                
+                string query = "Select * from Room where roomID = @roomId";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@roomId", roomId);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 return dt;
             }
