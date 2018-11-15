@@ -42,10 +42,28 @@ namespace DormitoryManager.AppCode {
                 Console.WriteLine(ex.Message);
                 return null;
             }
-
             return room;
         }
-
+        public bool IsSlotAvailable(Slot slot) {
+            try {
+                Slot result = new Slot();
+                DataTable dt = new DataTable();
+                using (SqlConnection conn = DBUtil.getConnection) {
+                    string query = "select * from Slot where roomID=@roomID and slotNumber = @slot";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@roomID", slot.RoomID);
+                    cmd.Parameters.AddWithValue("@slot", slot.Number);
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    conn.Close();
+                }
+                return dt.Rows[0][3].ToString() == "True";
+            } catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
         public Slot getSlot(string studentID) {
             try {
                 Slot result = new Slot();

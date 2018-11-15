@@ -12,7 +12,7 @@ namespace DormitoryManager {
     public partial class ChangeRoom : Form {
         public ChangeRoom() {
             InitializeComponent();
-        }     
+        }
         public void LoadRoomInfo() {
             Slot slot = new StudentAccess().getSlot(txtStudentId.Text);
             if (slot == null) {
@@ -44,7 +44,7 @@ namespace DormitoryManager {
         private void StudentCheckin_Load(object sender, EventArgs e) {
             LoadRoom();
             LoadStudents();
-        }    
+        }
 
         private void LoadRoom() {
             DataTable rooms = new DataAccess().LoadRooms();
@@ -71,7 +71,7 @@ namespace DormitoryManager {
             btnChange.Enabled = false;
             Room now = new StudentAccess().GetRoom(cbRoom.Text);
             UIUtil.FillRoom(cbRoom, cbSlot, txtDom, txtFee, txtMaxSlot, now, -1);
-            if (now != null ) {
+            if (now != null) {
                 txtDom.Text = now.Dom;
                 txtFee.Text = now.Fee.ToString();
                 txtMaxSlot.Text = now.NoSlot.ToString();
@@ -85,7 +85,19 @@ namespace DormitoryManager {
             LoadStudents();
         }
 
-       
+        public void Import(string studentID, Slot from, Slot to) {
+            Slot origin = new StudentAccess().getSlot(studentID);
+            if (origin.RoomID != from.RoomID || origin.Number != from.Number || !new StudentAccess().IsSlotAvailable(to)) {
+                MessageBox.Show("Request has expired");
+                //delete request
+                this.Close();
+            }
+            txtStudentId.Text = studentID;
+            LoadStudents();
+            cbRoom.Text = to.RoomID;
+            LoadSlot(to.RoomID);
+            cbSlot.Text = to.Number.ToString();
+        }
 
         private void btnChange_Click(object sender, EventArgs e) {
             string studentID = txtStudentId.Text;

@@ -101,6 +101,19 @@ namespace DormitoryManager {
             LoadStudents();
             cbRoom.SelectedIndex = 0;
         }
+
+        public void Import(string studentID, Slot slot) {
+            txtStudentId.Text = studentID;
+            if (!new StudentAccess().IsSlotAvailable(slot)) {
+                MessageBox.Show("Request has expired");
+                //delete request
+                this.Close();
+            }
+            cbRoom.SelectedIndex = cbRoom.FindString(slot.RoomID);
+            cbSlot.Text = slot.Number.ToString();
+            
+        }
+
     }
 
 

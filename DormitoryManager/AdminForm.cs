@@ -37,11 +37,18 @@ namespace DormitoryManager
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            new StudentCheckin().Show();
+            var tmp = new StudentCheckin();
+            tmp.Show();
+            tmp.Import("se01107", new AppCode.Slot() { RoomID = "A101", Number = 2 });
+            //tmp.Import("se01107", new AppCode.Slot() { RoomID = "A101", Number = 1 });
         }
 
         private void button3_Click(object sender, EventArgs e) {
-            new StudentCheckout().Show();
+            var tmp = new StudentCheckout();
+            tmp.Show();
+            tmp.Import("se00100", new AppCode.Slot() { RoomID = "A101", Number = 1 });
+            //tmp.Import("se00100", new AppCode.Slot() { RoomID = "A102", Number = 1 });
+
         }
 
         private void button4_Click(object sender, EventArgs e) {
@@ -49,7 +56,10 @@ namespace DormitoryManager
         }
 
         private void button5_Click(object sender, EventArgs e) {
-            new ChangeRoom().Show();
+            ChangeRoom ttmp = new ChangeRoom();
+            ttmp.Show();
+            ttmp.Import("se05177", new AppCode.Slot() { Number = 3, RoomID = "A107" }, new AppCode.Slot() { Number = 4, RoomID = "A107" });
+
         }
     }
 }
