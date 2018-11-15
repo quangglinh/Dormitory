@@ -28,8 +28,10 @@ namespace DormitoryManager
 
         private void LoadFee()
         {
-            DataTable dt = new DataAccess().LoadRoomInfo(cbRoomId.SelectedValue.ToString());
-            txtFee.Text = dt.Rows[0]["monthlyFee"].ToString();
+            string roomId = cbRoomId.SelectedValue.ToString();
+            DataTable dt = new DataAccess().LoadRoomInfo(roomId);
+            if(dt.Rows.Count>0)
+                txtFee.Text = dt.Rows[0]["monthlyFee"].ToString();
         }
         private void cbRoomId_SelectedIndexChanged(object sender, EventArgs e)
         {

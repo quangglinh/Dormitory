@@ -27,11 +27,15 @@ namespace DormitoryManager
 
         private void LoadRoomInformation()
         {
-            DataTable dt = new DataAccess().LoadRoomInfo(cbRooms.SelectedValue.ToString());
-            DataTable available = new DataAccess().LoadAvailableSlots(cbRooms.SelectedValue.ToString());
-            txtDom.Text = dt.Rows[0][1].ToString();
-            txtFee.Text = dt.Rows[0][2].ToString();
-            txtNoS.Text = dt.Rows[0][3].ToString();
+            string roomId = cbRooms.SelectedValue.ToString();
+            DataTable dt = new DataAccess().LoadRoomInfo(roomId);
+            DataTable available = new DataAccess().LoadAvailableSlots(roomId);
+            if(dt.Rows.Count > 0)
+            {
+                txtDom.Text = dt.Rows[0][1].ToString();
+                txtFee.Text = dt.Rows[0][2].ToString();
+                txtNoS.Text = dt.Rows[0][3].ToString();
+            }
             if (available.Rows.Count > 0)
             {
                 txtAvailable.Text = "";
