@@ -272,6 +272,7 @@
             this.ClientSize = new System.Drawing.Size(731, 202);
             this.Controls.Add(this.gbRoom);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StudentCheckin";
             this.Text = "Check In";
             this.Load += new System.EventHandler(this.StudentCheckin_Load);

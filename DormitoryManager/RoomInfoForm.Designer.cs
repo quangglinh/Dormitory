@@ -52,7 +52,7 @@
             this.lblNoS.AutoSize = true;
             this.lblNoS.Location = new System.Drawing.Point(148, 280);
             this.lblNoS.Name = "lblNoS";
-            this.lblNoS.Size = new System.Drawing.Size(0, 13);
+            this.lblNoS.Size = new System.Drawing.Size(0, 17);
             this.lblNoS.TabIndex = 44;
             // 
             // lblFee
@@ -60,7 +60,7 @@
             this.lblFee.AutoSize = true;
             this.lblFee.Location = new System.Drawing.Point(148, 226);
             this.lblFee.Name = "lblFee";
-            this.lblFee.Size = new System.Drawing.Size(0, 13);
+            this.lblFee.Size = new System.Drawing.Size(0, 17);
             this.lblFee.TabIndex = 43;
             // 
             // lblDom
@@ -68,7 +68,7 @@
             this.lblDom.AutoSize = true;
             this.lblDom.Location = new System.Drawing.Point(148, 180);
             this.lblDom.Name = "lblDom";
-            this.lblDom.Size = new System.Drawing.Size(0, 13);
+            this.lblDom.Size = new System.Drawing.Size(0, 17);
             this.lblDom.TabIndex = 42;
             // 
             // lblRoomId
@@ -76,7 +76,7 @@
             this.lblRoomId.AutoSize = true;
             this.lblRoomId.Location = new System.Drawing.Point(148, 128);
             this.lblRoomId.Name = "lblRoomId";
-            this.lblRoomId.Size = new System.Drawing.Size(0, 13);
+            this.lblRoomId.Size = new System.Drawing.Size(0, 17);
             this.lblRoomId.TabIndex = 41;
             // 
             // label6
@@ -84,7 +84,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(148, 129);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.Size = new System.Drawing.Size(0, 17);
             this.label6.TabIndex = 40;
             // 
             // txtNoS
@@ -92,7 +92,7 @@
             this.txtNoS.Location = new System.Drawing.Point(148, 253);
             this.txtNoS.Name = "txtNoS";
             this.txtNoS.ReadOnly = true;
-            this.txtNoS.Size = new System.Drawing.Size(100, 20);
+            this.txtNoS.Size = new System.Drawing.Size(121, 22);
             this.txtNoS.TabIndex = 39;
             // 
             // txtFee
@@ -100,7 +100,7 @@
             this.txtFee.Location = new System.Drawing.Point(148, 199);
             this.txtFee.Name = "txtFee";
             this.txtFee.ReadOnly = true;
-            this.txtFee.Size = new System.Drawing.Size(129, 20);
+            this.txtFee.Size = new System.Drawing.Size(121, 22);
             this.txtFee.TabIndex = 38;
             // 
             // txtDom
@@ -108,15 +108,15 @@
             this.txtDom.Location = new System.Drawing.Point(148, 151);
             this.txtDom.Name = "txtDom";
             this.txtDom.ReadOnly = true;
-            this.txtDom.Size = new System.Drawing.Size(100, 20);
+            this.txtDom.Size = new System.Drawing.Size(121, 22);
             this.txtDom.TabIndex = 37;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 256);
+            this.label4.Location = new System.Drawing.Point(42, 256);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.Size = new System.Drawing.Size(106, 17);
             this.label4.TabIndex = 35;
             this.label4.Text = "Number of Slot:";
             // 
@@ -125,7 +125,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(60, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.Size = new System.Drawing.Size(89, 17);
             this.label3.TabIndex = 34;
             this.label3.Text = "Monthly Fee:";
             // 
@@ -134,7 +134,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(96, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 33;
             this.label2.Text = "Dom:";
             // 
@@ -143,7 +143,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(76, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 32;
             this.label1.Text = "Room ID:";
             // 
@@ -153,7 +153,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(58, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(219, 29);
+            this.label5.Size = new System.Drawing.Size(266, 36);
             this.label5.TabIndex = 45;
             this.label5.Text = "Room Information";
             // 
@@ -162,7 +162,7 @@
             this.lblSearchError.AutoSize = true;
             this.lblSearchError.Location = new System.Drawing.Point(124, 68);
             this.lblSearchError.Name = "lblSearchError";
-            this.lblSearchError.Size = new System.Drawing.Size(0, 13);
+            this.lblSearchError.Size = new System.Drawing.Size(0, 17);
             this.lblSearchError.TabIndex = 47;
             // 
             // cbRooms
@@ -170,16 +170,16 @@
             this.cbRooms.FormattingEnabled = true;
             this.cbRooms.Location = new System.Drawing.Point(148, 102);
             this.cbRooms.Name = "cbRooms";
-            this.cbRooms.Size = new System.Drawing.Size(121, 21);
+            this.cbRooms.Size = new System.Drawing.Size(121, 24);
             this.cbRooms.TabIndex = 48;
             this.cbRooms.SelectedIndexChanged += new System.EventHandler(this.cbRooms_SelectedIndexChanged);
             // 
             // lblAvailable
             // 
             this.lblAvailable.AutoSize = true;
-            this.lblAvailable.Location = new System.Drawing.Point(48, 303);
+            this.lblAvailable.Location = new System.Drawing.Point(34, 303);
             this.lblAvailable.Name = "lblAvailable";
-            this.lblAvailable.Size = new System.Drawing.Size(85, 13);
+            this.lblAvailable.Size = new System.Drawing.Size(114, 17);
             this.lblAvailable.TabIndex = 50;
             this.lblAvailable.Text = "Available Slot(s):";
             // 
@@ -188,13 +188,13 @@
             this.txtAvailable.Location = new System.Drawing.Point(148, 300);
             this.txtAvailable.Name = "txtAvailable";
             this.txtAvailable.ReadOnly = true;
-            this.txtAvailable.Size = new System.Drawing.Size(100, 20);
+            this.txtAvailable.Size = new System.Drawing.Size(121, 22);
             this.txtAvailable.TabIndex = 51;
             // 
             // RoomInfoForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(363, 450);
+            this.ClientSize = new System.Drawing.Size(363, 370);
             this.Controls.Add(this.txtAvailable);
             this.Controls.Add(this.lblAvailable);
             this.Controls.Add(this.cbRooms);
@@ -212,6 +212,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RoomInfoForm";
             this.Text = "RoomInfoForm";
             this.ResumeLayout(false);

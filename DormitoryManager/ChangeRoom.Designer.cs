@@ -389,6 +389,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbRoom);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ChangeRoom";
             this.Text = "Change Room";
             this.Load += new System.EventHandler(this.StudentCheckin_Load);

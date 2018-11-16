@@ -75,6 +75,7 @@ namespace DormitoryManager
         {
             new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 3, "ChangeRoomRequest");
             MessageBox.Show("Update successful!");
+            LoadRequestInformation();
 
         }
 
@@ -82,12 +83,14 @@ namespace DormitoryManager
         {
             new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 4, "ChangeRoomRequest");
             MessageBox.Show("Update successful!");
+            LoadRequestInformation();
         }
 
         private void btnQueue_Click(object sender, EventArgs e)
         {
             new DataAccess().UpdateRequest(int.Parse(cbRequests.SelectedValue.ToString()), 2, "ChangeRoomRequest");
             MessageBox.Show("Update successful!");
+            LoadRequestInformation();
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
@@ -95,6 +98,7 @@ namespace DormitoryManager
             ChangeRoom ttmp = new ChangeRoom();
             ttmp.Show();
             ttmp.Import(txtId.Text, new AppCode.Slot() { Number = int.Parse(txtFromSlot.Text), RoomID = txtFromRoom.Text }, new AppCode.Slot() { Number = int.Parse(txtToSlot.Text), RoomID = txtToRoom.Text });
+            LoadRequestInformation();
         }
     }
 }

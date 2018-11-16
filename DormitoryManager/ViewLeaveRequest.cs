@@ -66,21 +66,18 @@ namespace DormitoryManager
 
         private void btnApprove_Click(object sender, EventArgs e)
         {
-            new DataAccess().UpdateLeaveRoomRequest(int.Parse(cbRequests.SelectedValue.ToString()), 3, "LeaveRoomRequest");
-            MessageBox.Show("Update successful!");
+            
 
         }
 
         private void btnReject_Click(object sender, EventArgs e)
         {
-            new DataAccess().UpdateLeaveRoomRequest(int.Parse(cbRequests.SelectedValue.ToString()), 4, "LeaveRoomRequest");
-            MessageBox.Show("Update successful!");
+            
         }
 
         private void btnQueue_Click(object sender, EventArgs e)
         {
-            new DataAccess().UpdateLeaveRoomRequest(int.Parse(cbRequests.SelectedValue.ToString()), 2, "LeaveRoomRequest");
-            MessageBox.Show("Update successful!");
+            
         }
 
         private void cbRequests_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,17 +94,24 @@ namespace DormitoryManager
 
         private void btnQueue_Click_1(object sender, EventArgs e)
         {
+            new DataAccess().UpdateLeaveRoomRequest(int.Parse(cbRequests.SelectedValue.ToString()), 2, "LeaveRoomRequest");
+            MessageBox.Show("Update successful!");
+            LoadRequestInformation();
 
         }
 
         private void btnApprove_Click_1(object sender, EventArgs e)
         {
-
+            new DataAccess().UpdateLeaveRoomRequest(int.Parse(cbRequests.SelectedValue.ToString()), 3, "LeaveRoomRequest");
+            MessageBox.Show("Update successful!");
+            LoadRequestInformation();
         }
 
         private void btnReject_Click_1(object sender, EventArgs e)
         {
-
+            new DataAccess().UpdateLeaveRoomRequest(int.Parse(cbRequests.SelectedValue.ToString()), 4, "LeaveRoomRequest");
+            MessageBox.Show("Update successful!");
+            LoadRequestInformation();
         }
     }
 }

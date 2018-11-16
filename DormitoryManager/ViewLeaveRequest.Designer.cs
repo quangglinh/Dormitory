@@ -53,9 +53,10 @@
             // 
             // btnQueue
             // 
-            this.btnQueue.Location = new System.Drawing.Point(468, 105);
+            this.btnQueue.Location = new System.Drawing.Point(624, 129);
+            this.btnQueue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQueue.Name = "btnQueue";
-            this.btnQueue.Size = new System.Drawing.Size(75, 23);
+            this.btnQueue.Size = new System.Drawing.Size(100, 28);
             this.btnQueue.TabIndex = 28;
             this.btnQueue.Text = "Queue";
             this.btnQueue.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             // 
             // btnReject
             // 
-            this.btnReject.Location = new System.Drawing.Point(468, 30);
+            this.btnReject.Location = new System.Drawing.Point(624, 37);
+            this.btnReject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReject.Name = "btnReject";
-            this.btnReject.Size = new System.Drawing.Size(75, 23);
+            this.btnReject.Size = new System.Drawing.Size(100, 28);
             this.btnReject.TabIndex = 27;
             this.btnReject.Text = "Reject";
             this.btnReject.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@
             // 
             // btnApprove
             // 
-            this.btnApprove.Location = new System.Drawing.Point(321, 31);
+            this.btnApprove.Location = new System.Drawing.Point(428, 38);
+            this.btnApprove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(75, 23);
+            this.btnApprove.Size = new System.Drawing.Size(100, 28);
             this.btnApprove.TabIndex = 26;
             this.btnApprove.Text = "Approve";
             this.btnApprove.UseVisualStyleBackColor = true;
@@ -83,72 +86,81 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(359, 108);
+            this.txtStatus.Location = new System.Drawing.Point(479, 133);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(100, 20);
+            this.txtStatus.Size = new System.Drawing.Size(132, 22);
             this.txtStatus.TabIndex = 25;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(318, 111);
+            this.label8.Location = new System.Drawing.Point(424, 137);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.Size = new System.Drawing.Size(46, 17);
             this.label8.TabIndex = 24;
             this.label8.Text = "status";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 36);
+            this.label7.Location = new System.Drawing.Point(39, 44);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 13);
+            this.label7.Size = new System.Drawing.Size(108, 17);
             this.label7.TabIndex = 23;
             this.label7.Text = "Choose request";
             // 
             // cbRequests
             // 
             this.cbRequests.FormattingEnabled = true;
-            this.cbRequests.Location = new System.Drawing.Point(116, 33);
+            this.cbRequests.Location = new System.Drawing.Point(155, 41);
+            this.cbRequests.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbRequests.Name = "cbRequests";
-            this.cbRequests.Size = new System.Drawing.Size(111, 21);
+            this.cbRequests.Size = new System.Drawing.Size(147, 24);
             this.cbRequests.TabIndex = 22;
             this.cbRequests.SelectedIndexChanged += new System.EventHandler(this.cbRequests_SelectedIndexChanged);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtReason);
-            this.groupBox3.Location = new System.Drawing.Point(311, 150);
+            this.groupBox3.Location = new System.Drawing.Point(415, 185);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(243, 281);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(324, 150);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Reason";
             // 
             // txtReason
             // 
-            this.txtReason.Location = new System.Drawing.Point(7, 20);
+            this.txtReason.Location = new System.Drawing.Point(9, 25);
+            this.txtReason.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtReason.Name = "txtReason";
             this.txtReason.ReadOnly = true;
-            this.txtReason.Size = new System.Drawing.Size(228, 255);
+            this.txtReason.Size = new System.Drawing.Size(303, 112);
             this.txtReason.TabIndex = 0;
             this.txtReason.Text = "";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(106, 111);
+            this.txtName.Location = new System.Drawing.Point(141, 137);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(199, 20);
+            this.txtName.Size = new System.Drawing.Size(264, 22);
             this.txtName.TabIndex = 19;
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(106, 79);
+            this.txtId.Location = new System.Drawing.Point(141, 97);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.Size = new System.Drawing.Size(132, 22);
             this.txtId.TabIndex = 18;
             // 
             // groupBox1
@@ -157,62 +169,70 @@
             this.groupBox1.Controls.Add(this.txtFromSlot);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(32, 150);
+            this.groupBox1.Location = new System.Drawing.Point(43, 185);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(273, 122);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(364, 150);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "From";
             // 
             // txtFromRoom
             // 
-            this.txtFromRoom.Location = new System.Drawing.Point(48, 69);
+            this.txtFromRoom.Location = new System.Drawing.Point(64, 85);
+            this.txtFromRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFromRoom.Name = "txtFromRoom";
             this.txtFromRoom.ReadOnly = true;
-            this.txtFromRoom.Size = new System.Drawing.Size(126, 20);
+            this.txtFromRoom.Size = new System.Drawing.Size(167, 22);
             this.txtFromRoom.TabIndex = 3;
             // 
             // txtFromSlot
             // 
-            this.txtFromSlot.Location = new System.Drawing.Point(48, 17);
+            this.txtFromSlot.Location = new System.Drawing.Point(64, 21);
+            this.txtFromSlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFromSlot.Name = "txtFromSlot";
             this.txtFromSlot.ReadOnly = true;
-            this.txtFromSlot.Size = new System.Drawing.Size(126, 20);
+            this.txtFromSlot.Size = new System.Drawing.Size(167, 22);
             this.txtFromSlot.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 72);
+            this.label4.Location = new System.Drawing.Point(9, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 1;
             this.label4.Text = "Room";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 20);
+            this.label3.Location = new System.Drawing.Point(9, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
+            this.label3.Size = new System.Drawing.Size(32, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Slot";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 114);
+            this.label2.Location = new System.Drawing.Point(39, 140);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.Size = new System.Drawing.Size(96, 17);
             this.label2.TabIndex = 16;
             this.label2.Text = "Student name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 82);
+            this.label1.Location = new System.Drawing.Point(39, 101);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 15;
             this.label1.Text = "Student ID";
             // 
@@ -221,9 +241,10 @@
             this.btnCheckOut.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(106, 321);
+            this.btnCheckOut.Location = new System.Drawing.Point(529, 375);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(121, 57);
+            this.btnCheckOut.Size = new System.Drawing.Size(147, 43);
             this.btnCheckOut.TabIndex = 29;
             this.btnCheckOut.Text = "Check out";
             this.btnCheckOut.UseVisualStyleBackColor = false;
@@ -231,9 +252,9 @@
             // 
             // ViewLeaveRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 450);
+            this.ClientSize = new System.Drawing.Size(795, 446);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnQueue);
             this.Controls.Add(this.btnReject);
@@ -248,6 +269,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewLeaveRequest";
             this.Text = "Leave room request";
             this.groupBox3.ResumeLayout(false);
