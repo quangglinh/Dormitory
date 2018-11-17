@@ -28,154 +28,212 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.domComboBox = new System.Windows.Forms.ComboBox();
             this.capacityComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Button();
             this.showAllButton = new System.Windows.Forms.Button();
-            this.searchResultDGV = new System.Windows.Forms.DataGridView();
             this.inputText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.searchByNameButton = new System.Windows.Forms.Button();
             this.messageLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.searchResultDGV = new System.Windows.Forms.DataGridView();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchResultDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 46);
+            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label1.Location = new System.Drawing.Point(62, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(41, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dom:";
             // 
             // domComboBox
             // 
+            this.domComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.domComboBox.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.domComboBox.FormattingEnabled = true;
-            this.domComboBox.Location = new System.Drawing.Point(52, 43);
+            this.domComboBox.Location = new System.Drawing.Point(109, 38);
             this.domComboBox.Name = "domComboBox";
-            this.domComboBox.Size = new System.Drawing.Size(60, 21);
+            this.domComboBox.Size = new System.Drawing.Size(60, 26);
             this.domComboBox.TabIndex = 1;
             // 
             // capacityComboBox
             // 
+            this.capacityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.capacityComboBox.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.capacityComboBox.FormattingEnabled = true;
-            this.capacityComboBox.Location = new System.Drawing.Point(213, 45);
+            this.capacityComboBox.Location = new System.Drawing.Point(245, 41);
             this.capacityComboBox.Name = "capacityComboBox";
-            this.capacityComboBox.Size = new System.Drawing.Size(60, 21);
+            this.capacityComboBox.Size = new System.Drawing.Size(60, 26);
             this.capacityComboBox.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 48);
+            this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label2.Location = new System.Drawing.Point(175, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(64, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Capacity:";
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(291, 39);
+            this.searchButton.BackColor = System.Drawing.Color.CadetBlue;
+            this.searchButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.ForeColor = System.Drawing.Color.Yellow;
+            this.searchButton.Location = new System.Drawing.Point(311, 39);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 27);
+            this.searchButton.Size = new System.Drawing.Size(75, 29);
             this.searchButton.TabIndex = 4;
             this.searchButton.Text = "Search ";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.UseVisualStyleBackColor = false;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // showAllButton
             // 
-            this.showAllButton.Location = new System.Drawing.Point(382, 32);
+            this.showAllButton.BackColor = System.Drawing.Color.CadetBlue;
+            this.showAllButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showAllButton.ForeColor = System.Drawing.Color.Yellow;
+            this.showAllButton.Location = new System.Drawing.Point(392, 38);
             this.showAllButton.Name = "showAllButton";
-            this.showAllButton.Size = new System.Drawing.Size(146, 65);
+            this.showAllButton.Size = new System.Drawing.Size(117, 63);
             this.showAllButton.TabIndex = 5;
             this.showAllButton.Text = "Show all available ";
-            this.showAllButton.UseVisualStyleBackColor = true;
+            this.showAllButton.UseVisualStyleBackColor = false;
             this.showAllButton.Click += new System.EventHandler(this.showAllButton_Click);
-            // 
-            // searchResultDGV
-            // 
-            this.searchResultDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.searchResultDGV.Location = new System.Drawing.Point(16, 145);
-            this.searchResultDGV.Name = "searchResultDGV";
-            this.searchResultDGV.Size = new System.Drawing.Size(670, 237);
-            this.searchResultDGV.TabIndex = 6;
-            this.searchResultDGV.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.searchResultDGV_DataBindingComplete);
             // 
             // inputText
             // 
-            this.inputText.Location = new System.Drawing.Point(118, 78);
+            this.inputText.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputText.Location = new System.Drawing.Point(109, 73);
             this.inputText.Name = "inputText";
-            this.inputText.Size = new System.Drawing.Size(155, 20);
+            this.inputText.Size = new System.Drawing.Size(194, 26);
             this.inputText.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 81);
+            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label3.Location = new System.Drawing.Point(15, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.Size = new System.Drawing.Size(88, 18);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Enter room name:";
+            this.label3.Text = "Room Name:";
             // 
             // searchByNameButton
             // 
-            this.searchByNameButton.Location = new System.Drawing.Point(291, 72);
+            this.searchByNameButton.BackColor = System.Drawing.Color.CadetBlue;
+            this.searchByNameButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchByNameButton.ForeColor = System.Drawing.Color.Yellow;
+            this.searchByNameButton.Location = new System.Drawing.Point(311, 74);
             this.searchByNameButton.Name = "searchByNameButton";
-            this.searchByNameButton.Size = new System.Drawing.Size(75, 26);
+            this.searchByNameButton.Size = new System.Drawing.Size(75, 27);
             this.searchByNameButton.TabIndex = 9;
             this.searchByNameButton.Text = "Search";
-            this.searchByNameButton.UseVisualStyleBackColor = true;
+            this.searchByNameButton.UseVisualStyleBackColor = false;
             this.searchByNameButton.Click += new System.EventHandler(this.searchByNameButton_Click);
             // 
             // messageLabel
             // 
             this.messageLabel.AutoSize = true;
-            this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.messageLabel.Location = new System.Drawing.Point(230, 115);
+            this.messageLabel.Location = new System.Drawing.Point(106, 123);
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(56, 13);
+            this.messageLabel.Size = new System.Drawing.Size(66, 19);
             this.messageLabel.TabIndex = 10;
             this.messageLabel.Text = "message";
             // 
-            // label4
+            // groupBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(183, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Search Available Room: ";
+            this.groupBox1.Controls.Add(this.showAllButton);
+            this.groupBox1.Controls.Add(this.messageLabel);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.domComboBox);
+            this.groupBox1.Controls.Add(this.searchByNameButton);
+            this.groupBox1.Controls.Add(this.capacityComboBox);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.inputText);
+            this.groupBox1.Controls.Add(this.searchButton);
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.groupBox1.Location = new System.Drawing.Point(16, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(524, 163);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Search Room";
+            // 
+            // searchResultDGV
+            // 
+            this.searchResultDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.searchResultDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchResultDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.searchResultDGV.ColumnHeadersHeight = 21;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.searchResultDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            this.searchResultDGV.EnableHeadersVisualStyles = false;
+            this.searchResultDGV.Location = new System.Drawing.Point(16, 198);
+            this.searchResultDGV.Name = "searchResultDGV";
+            this.searchResultDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchResultDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.searchResultDGV.RowHeadersVisible = false;
+            this.searchResultDGV.Size = new System.Drawing.Size(524, 218);
+            this.searchResultDGV.TabIndex = 13;
             // 
             // SearchRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 394);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.messageLabel);
-            this.Controls.Add(this.searchByNameButton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.inputText);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(558, 445);
             this.Controls.Add(this.searchResultDGV);
-            this.Controls.Add(this.showAllButton);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.capacityComboBox);
-            this.Controls.Add(this.domComboBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "SearchRoom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchRoom";
             this.Load += new System.EventHandler(this.SearchRoom_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchResultDGV)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -187,11 +245,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button showAllButton;
-        private System.Windows.Forms.DataGridView searchResultDGV;
         private System.Windows.Forms.TextBox inputText;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button searchByNameButton;
         private System.Windows.Forms.Label messageLabel;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView searchResultDGV;
     }
 }

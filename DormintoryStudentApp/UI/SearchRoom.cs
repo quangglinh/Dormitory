@@ -15,6 +15,7 @@ namespace DormintoryStudentApp.UI
         public SearchRoom()
         {
             InitializeComponent();
+            messageLabel.Text = "";
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -31,6 +32,7 @@ namespace DormintoryStudentApp.UI
             } else
             {
                 searchResultDGV.DataSource = null;
+                messageLabel.ForeColor = Color.Yellow;
                 messageLabel.Text = "No results found";
             }
 
@@ -59,6 +61,7 @@ namespace DormintoryStudentApp.UI
                     {
                         // this room is full
                         searchResultDGV.DataSource = availableRoom;
+                        messageLabel.ForeColor = Color.Yellow;
                         messageLabel.Text =  "Room " + input + " is full now";
                         return;
                     }
@@ -67,6 +70,7 @@ namespace DormintoryStudentApp.UI
                 {
                     // send out message
                     searchResultDGV.DataSource = null;
+                    messageLabel.ForeColor = Color.Yellow;
                     messageLabel.Text = "This room is not existed";
                     return;
                 }

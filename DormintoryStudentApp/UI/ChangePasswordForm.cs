@@ -22,6 +22,7 @@ namespace DormintoryStudentApp.UI
         {
             InitializeComponent();
             this.theAccount = theAccount;
+            messageLabel.Text = "";
         }
 
         private void ChangePasswordForm_Load(object sender, EventArgs e)
@@ -33,15 +34,18 @@ namespace DormintoryStudentApp.UI
         {
             if (currentPassField.Text=="" || newPassField.Text=="" || confirmPassField.Text == "")
             {
+                messageLabel.ForeColor = Color.Yellow;
                 messageLabel.Text = "All Field Required!";
                 return;
             } 
             else if (!( new StudentAccountDAL().validCurrentPassword(currentPassField.Text, theAccount.username) ) )
             {
+                messageLabel.ForeColor = Color.Yellow;
                 messageLabel.Text = "Current password is not correct!";
                 return;
             } else if (!(new StudentAccountDAL().validConfirmPassword(newPassField.Text, confirmPassField.Text)))
             {
+                messageLabel.ForeColor = Color.Yellow;
                 messageLabel.Text = "Confirm password is not match!";
                 return;
             } else
@@ -49,14 +53,26 @@ namespace DormintoryStudentApp.UI
                 bool successChange = new StudentAccountDAL().changePassword(newPassField.Text, theAccount.studentID);
                 if(successChange)
                 {
+                    messageLabel.ForeColor = Color.GreenYellow;
                     messageLabel.Text = "Change successfully";
                     return;
                 } else
                 {
+                    messageLabel.ForeColor = Color.Yellow;
                     messageLabel.Text = "Change fail!";
                     return;
                 }
             }
+        }
+
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

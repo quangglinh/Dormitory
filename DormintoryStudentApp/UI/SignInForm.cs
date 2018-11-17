@@ -37,6 +37,7 @@ namespace DormintoryStudentApp
             if (username == "" || password == "") // username or password is empty
             {
                 MessageBox.Show("Username and password are required!");
+                return;
             } else // have entered username and password
             {
                 StudentAccount theAccount = new StudentDAL().studentLogin(username, password);
@@ -50,6 +51,7 @@ namespace DormintoryStudentApp
                 }
                 else // wrong username or password
                 {
+                    errorMessage.ForeColor = Color.Yellow;
                     errorMessage.Text = "Wrong username or password";
                 }
             }
@@ -64,6 +66,16 @@ namespace DormintoryStudentApp
         private void SignInForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

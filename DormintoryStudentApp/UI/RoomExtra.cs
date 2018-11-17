@@ -20,6 +20,7 @@ namespace DormintoryStudentApp.UI
             InitializeComponent();
             dao = new StudentDAL();
             this.student = Student;
+            completeFeeLabel.Text = "";
         }
         public void setName()
         {
@@ -80,12 +81,15 @@ namespace DormintoryStudentApp.UI
                 txtExtraFee.Text = extraFee;
                 if(!isComplete)
                 {
-                    completeFeeLabel.ForeColor = Color.Red;
-                    completeFeeLabel.Text = "Chưa hoàn thành: " + note;
+                    compleMessage.ForeColor = Color.Yellow;
+                    compleMessage.Text = "Not complete!";
+                    noteInfoMessage.ForeColor = Color.Yellow;
+                    noteInfoMessage.Text = "Reason: " + note;
                 } else
                 {
-                    completeFeeLabel.ForeColor = Color.Green;
-                    completeFeeLabel.Text = "Đã hoàn thành";
+                    compleMessage.ForeColor = Color.GreenYellow;
+                    noteInfoMessage.Text = "";
+                    compleMessage.Text = "Complete!";
                 }
             }
         }
@@ -121,6 +125,16 @@ namespace DormintoryStudentApp.UI
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
