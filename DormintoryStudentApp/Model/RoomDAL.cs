@@ -137,5 +137,33 @@ namespace DormintoryStudentApp.Model
            
         }
 
+        public DataTable getAllRoomWhichHaveAvailableSlot( )
+        {
+
+            using (SqlConnection conn = DBUltiity.getConnection)
+            {
+                string query = "SELECT DISTINCT Slot.roomID FROM Slot WHERE isAvailable = 1";
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+
+        }
+
+        public DataTable getAvailableSlotByRoomName(string roomName)
+        {
+            using (SqlConnection conn = DBUltiity.getConnection)
+            {
+                string query = "SELECT DISTINCT Slot.slotNumber FROM Slot WHERE roomID = @roomName AND isAvailable = 1";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@roomName", roomName);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
     }
 }

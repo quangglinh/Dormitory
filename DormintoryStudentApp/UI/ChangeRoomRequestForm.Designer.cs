@@ -39,13 +39,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.toRoomField = new System.Windows.Forms.TextBox();
-            this.toSlotField = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.messageLabel = new System.Windows.Forms.Label();
             this.message = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toSlotCombobox = new System.Windows.Forms.ComboBox();
+            this.toRoomCombobox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,22 +161,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Student:";
             // 
-            // toRoomField
-            // 
-            this.toRoomField.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toRoomField.Location = new System.Drawing.Point(123, 178);
-            this.toRoomField.Name = "toRoomField";
-            this.toRoomField.Size = new System.Drawing.Size(149, 24);
-            this.toRoomField.TabIndex = 25;
-            // 
-            // toSlotField
-            // 
-            this.toSlotField.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toSlotField.Location = new System.Drawing.Point(123, 148);
-            this.toSlotField.Name = "toSlotField";
-            this.toSlotField.Size = new System.Drawing.Size(149, 24);
-            this.toSlotField.TabIndex = 24;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -219,14 +203,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.toRoomCombobox);
+            this.groupBox1.Controls.Add(this.toSlotCombobox);
             this.groupBox1.Controls.Add(this.nameField);
             this.groupBox1.Controls.Add(this.message);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.messageLabel);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.toRoomField);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.toSlotField);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -244,6 +228,29 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Change Room";
+            // 
+            // toSlotCombobox
+            // 
+            this.toSlotCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toSlotCombobox.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toSlotCombobox.FormattingEnabled = true;
+            this.toSlotCombobox.Location = new System.Drawing.Point(122, 146);
+            this.toSlotCombobox.Name = "toSlotCombobox";
+            this.toSlotCombobox.Size = new System.Drawing.Size(121, 26);
+            this.toSlotCombobox.TabIndex = 28;
+            this.toSlotCombobox.SelectedIndexChanged += new System.EventHandler(this.toSlotCombobox_SelectedIndexChanged);
+            // 
+            // toRoomCombobox
+            // 
+            this.toRoomCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toRoomCombobox.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toRoomCombobox.FormattingEnabled = true;
+            this.toRoomCombobox.Location = new System.Drawing.Point(122, 176);
+            this.toRoomCombobox.Name = "toRoomCombobox";
+            this.toRoomCombobox.Size = new System.Drawing.Size(121, 26);
+            this.toRoomCombobox.TabIndex = 29;
+            this.toRoomCombobox.SelectedIndexChanged += new System.EventHandler(this.toRoomCombobox_SelectedIndexChanged);
+            this.toRoomCombobox.SelectedValueChanged += new System.EventHandler(this.toRoomCombobox_SelectedValueChanged);
             // 
             // ChangeRoomRequestForm
             // 
@@ -276,12 +283,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox toRoomField;
-        private System.Windows.Forms.TextBox toSlotField;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label messageLabel;
         private System.Windows.Forms.Label message;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox toRoomCombobox;
+        private System.Windows.Forms.ComboBox toSlotCombobox;
     }
 }

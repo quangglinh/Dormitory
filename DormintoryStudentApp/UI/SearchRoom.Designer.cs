@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.domComboBox = new System.Windows.Forms.ComboBox();
             this.capacityComboBox = new System.Windows.Forms.ComboBox();
@@ -39,7 +39,6 @@
             this.showAllButton = new System.Windows.Forms.Button();
             this.inputText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.searchByNameButton = new System.Windows.Forms.Button();
             this.messageLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.searchResultDGV = new System.Windows.Forms.DataGridView();
@@ -67,6 +66,8 @@
             this.domComboBox.Name = "domComboBox";
             this.domComboBox.Size = new System.Drawing.Size(60, 26);
             this.domComboBox.TabIndex = 1;
+            this.domComboBox.SelectedIndexChanged += new System.EventHandler(this.domComboBox_SelectedIndexChanged);
+            this.domComboBox.SelectedValueChanged += new System.EventHandler(this.domComboBox_SelectedValueChanged);
             // 
             // capacityComboBox
             // 
@@ -77,6 +78,7 @@
             this.capacityComboBox.Name = "capacityComboBox";
             this.capacityComboBox.Size = new System.Drawing.Size(60, 26);
             this.capacityComboBox.TabIndex = 2;
+            this.capacityComboBox.SelectedIndexChanged += new System.EventHandler(this.capacityComboBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -122,6 +124,7 @@
             this.inputText.Name = "inputText";
             this.inputText.Size = new System.Drawing.Size(194, 26);
             this.inputText.TabIndex = 7;
+            this.inputText.TextChanged += new System.EventHandler(this.inputText_TextChanged);
             // 
             // label3
             // 
@@ -133,19 +136,6 @@
             this.label3.Size = new System.Drawing.Size(88, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Room Name:";
-            // 
-            // searchByNameButton
-            // 
-            this.searchByNameButton.BackColor = System.Drawing.Color.CadetBlue;
-            this.searchByNameButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchByNameButton.ForeColor = System.Drawing.Color.Yellow;
-            this.searchByNameButton.Location = new System.Drawing.Point(311, 74);
-            this.searchByNameButton.Name = "searchByNameButton";
-            this.searchByNameButton.Size = new System.Drawing.Size(75, 27);
-            this.searchByNameButton.TabIndex = 9;
-            this.searchByNameButton.Text = "Search";
-            this.searchByNameButton.UseVisualStyleBackColor = false;
-            this.searchByNameButton.Click += new System.EventHandler(this.searchByNameButton_Click);
             // 
             // messageLabel
             // 
@@ -164,7 +154,6 @@
             this.groupBox1.Controls.Add(this.messageLabel);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.domComboBox);
-            this.groupBox1.Controls.Add(this.searchByNameButton);
             this.groupBox1.Controls.Add(this.capacityComboBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -183,35 +172,35 @@
             // 
             this.searchResultDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.searchResultDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchResultDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchResultDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.searchResultDGV.ColumnHeadersHeight = 21;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.searchResultDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.searchResultDGV.DefaultCellStyle = dataGridViewCellStyle29;
             this.searchResultDGV.EnableHeadersVisualStyles = false;
             this.searchResultDGV.Location = new System.Drawing.Point(16, 198);
             this.searchResultDGV.Name = "searchResultDGV";
             this.searchResultDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchResultDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchResultDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.searchResultDGV.RowHeadersVisible = false;
             this.searchResultDGV.Size = new System.Drawing.Size(524, 218);
             this.searchResultDGV.TabIndex = 13;
@@ -247,7 +236,6 @@
         private System.Windows.Forms.Button showAllButton;
         private System.Windows.Forms.TextBox inputText;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button searchByNameButton;
         private System.Windows.Forms.Label messageLabel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView searchResultDGV;

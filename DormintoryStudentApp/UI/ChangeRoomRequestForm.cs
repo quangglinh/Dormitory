@@ -34,7 +34,22 @@ namespace DormintoryStudentApp.UI
             slotField.Text = slot.slotNumber.ToString();
             roomField.Text = slot.roomID;
 
+            DataTable allAvailableRoomTable = roomDAL.getAllRoomWhichHaveAvailableSlot();
+            toRoomCombobox.DataSource = allAvailableRoomTable;
+            toRoomCombobox.DisplayMember = "roomID";
+            toRoomCombobox.ValueMember = "roomID";
 
+            loadSlot(toRoomCombobox.SelectedValue.ToString());
+
+        }
+        // load slot available from room
+        public void loadSlot(string roomName)
+        {
+            toSlotCombobox.DataSource = null;
+            DataTable allSlotAvailableFromRoom = new RoomDAL().getAvailableSlotByRoomName(roomName);
+            toSlotCombobox.DataSource = allSlotAvailableFromRoom;
+            toSlotCombobox.DisplayMember = "slotNumber";
+            toSlotCombobox.ValueMember = "slotNumber";
         }
 
         private void ChangeRoomRequestForm_Load(object sender, EventArgs e)
@@ -54,8 +69,8 @@ namespace DormintoryStudentApp.UI
         }
         private void sendButton_Click(object sender, EventArgs e)
         {
-            string toRoom = toRoomField.Text;
-            string toSlot = toSlotField.Text;
+            string toRoom = toRoomCombobox.SelectedValue.ToString();
+            string toSlot = toSlotCombobox.SelectedValue.ToString();
 
             if(toRoom=="" || toSlot=="")
             {
@@ -79,7 +94,7 @@ namespace DormintoryStudentApp.UI
                 else
                 {
                     // insert
-                    bool successInsert = new RequestDAL().addChangeRoomRequest(theStudent.studentID, slotField.Text, roomField.Text, contentField.Text, toSlotField.Text, toRoomField.Text, "1");
+                    bool successInsert = new RequestDAL().addChangeRoomRequest(theStudent.studentID, slotField.Text, roomField.Text, contentField.Text, toSlot, toRoom, "1");
                     if (successInsert)
                     {
                         MessageBox.Show("Request has sent!", "Inform", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -93,6 +108,23 @@ namespace DormintoryStudentApp.UI
                 }
             } 
             
+        }
+
+        private void toRoomCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox cb = sender as ComboBox;
+            string selectedValue = cb.SelectedValue.ToString();
+            loadSlot(selectedValue);
+        }
+
+        private void toRoomCombobox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toSlotCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
